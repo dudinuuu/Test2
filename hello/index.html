@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Fixing your computer at affordable prices">
+    <meta name="keywords" content="computer, affordable, fixing, problems">
+    <meta name="author" content="Eman Abela">
+    <title>Computer Medic | Fixing your computer with cheap prices</title>
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div id="branding">
+          <a href="index.html"><h1><span class="highlight">Computer</span> Medic</h1></a>
+        </div>
+        <nav>
+          <ul>
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="hardwareproblems.html">Hardware Problems</a></li>
+            <li><a href="softwareproblems.html">Software Problems</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="legalterms.html">Legal Terms</a></li>
+
+          </ul>
+        </nav>
+
+
+      </div>
+
+    </header>
+
+    <section id="showcase">
+      <div class="container">
+        <h1>Affordable Computer Maintenance</h1>
+        <p>Today, computers are found all around us. We are here to help you keep your computer up to date and well maintained.</p>
+      </div>
+    </section>
+
+    <section id="newsletter">
+      <div class="container">
+        <h1>Subscribe to our newsletter</h1>
+        <form>
+          <input type="email" placeholder="Input Email please :)">
+          <button type="submit" class="button_1">Enter</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="boxes">
+      <div class="container">
+        <div class="box">
+          <a href="hardwareproblems.html">
+            <img src="./img/hardware_logo.png" width="190" height="200" alt="Hardware Logo">
+          </a>
+          <a href="hardwareproblems.html"><h3 id="hp">Hardware Problems</h3>
+        </div>
+
+        <div class="box">
+          <a href="softwareproblems.html">
+          <img src="./img/software_logo.png" width="190" height="200">
+        </a>
+          <a href="softwareproblems.html"><h3>Software Problems</h3>
+        </div>
+      </section>
+
+      <footer>
+        <li><a href="contactus.html">Contact Us</a></li>
+        <li><a href="legalterms.html">Legal Terms</a></li>
+
+        <p>Computer Medic &copy; 2017</p>
+
+        <p id="date"></p>
+        <script>
+        var n = new Date();
+        var y = n.getFullYear();
+        var m = n.getMonth() + 1;
+        var d = n.getDate();
+        document.getElementById("date").innerHTML = d + "/" + m + "/" +y;
+        </script>
+
+      </footer>
+
+
+
+  </body>
+</html>
