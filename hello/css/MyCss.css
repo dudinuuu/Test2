@@ -26,3 +26,15 @@
   margin-top: 0.7rem;
   margin-bottom: 1rem;
 }
+
+#Library {
+   content:url('https://i.pinimg.com/originals/e3/29/48/e32948affae374af6166d78f2d8f89f0.png');
+   height: 40px;
+   width: 40px;
+}
+
+#Library:hover {
+   content: url('https://i.pinimg.com/originals/03/8d/e7/038de7b64bafd704b58fa87d5dfd648c.png');
+   height: 40px;
+   width: 40px;
+}
