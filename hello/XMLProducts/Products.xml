@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+ <productListing title="Royal Sports Products">
+  <Boxing>
+    <name>Product</name>
+    <description>Product One is an exciting new widget that will
+      simplify your life.</description>
+    <cost>$19.95</cost>
+    <shipping>$2.95</shipping>
+  </Boxing>
+  <Football>
+    <name>Product</name> 
+    ...
+  </Football>
+  <Basketball>
+    <name>Product</name>
+    <description>This is such a terrific widget that you will
+      most certainly want to buy one for your home and another one
+      for your office!</p>
+    <cost>$24.95</cost>
+    <shipping>$0.00</shipping>
+  </Basketball>
+  ...
+ </productListing>
