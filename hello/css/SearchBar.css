@@ -16,4 +16,5 @@ html, body {
     width:30%;
     background-color:white;
     color:grey;
+    background-image: url('searchicon.png');
 }
