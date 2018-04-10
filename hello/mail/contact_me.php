@@ -1,11 +1,11 @@
 <?php
 
 error_reporting(E_ALL);
-ini_set('display_errors');
-
+ini_set('display_errors',1);
 
 // Check for empty fields
-if(empty($_POST['name'])      ||
+/*
+if(empty(isset($_POST['name']))      ||
    empty($_POST['email'])     ||
    empty($_POST['phone'])     ||
    empty($_POST['message'])   ||
@@ -19,6 +19,13 @@ $name = strip_tags(htmlspecialchars($_POST['name']));
 $email_address = strip_tags(htmlspecialchars($_POST['email']));
 $phone = strip_tags(htmlspecialchars($_POST['phone']));
 $message = strip_tags(htmlspecialchars($_POST['message']));
+*/
+
+$name = "kurt";
+$email_address = "kcam0061@gmail.com";
+$phone = "79461376";
+$message = "lol";
+
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -43,9 +50,16 @@ try {
     $mail->Password = 'royalsport';                           // SMTP password
     $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 587;                                    // TCP port to connect to
+    $mail->SMTPOptions = array(
+        'ssl' => array(
+            'verify_peer' => false,
+            'verify_peer_name' => false,
+            'allow_self_signed' => true
+        )
+    );
 
     //Recipients
-    $mail->setFrom('fromexample.com', 'Mailer');
+    $mail->setFrom('royal.sport.101@gmail.com', 'Mailer');
     //$mail->addAddress('royal.sport.101@gmail.com', 'Joe User');     // Add a recipient
     $mail->addAddress('royal.sport.101@gmail.com');               // Name is optional
     $mail->addReplyTo('info@example.com', 'Information');
@@ -70,7 +84,6 @@ try {
 } catch (Exception $e) {
     echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
 }
-
 
 return true;
 ?>
