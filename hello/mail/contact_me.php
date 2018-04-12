@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 ini_set('display_errors',1);
 
 // Check for empty fields
-/*
+
 if(empty(isset($_POST['name']))      ||
    empty($_POST['email'])     ||
    empty($_POST['phone'])     ||
@@ -19,12 +19,8 @@ $name = strip_tags(htmlspecialchars($_POST['name']));
 $email_address = strip_tags(htmlspecialchars($_POST['email']));
 $phone = strip_tags(htmlspecialchars($_POST['phone']));
 $message = strip_tags(htmlspecialchars($_POST['message']));
-*/
 
-$name = "kurt";
-$email_address = "kcam0061@gmail.com";
-$phone = "79461376";
-$message = "lol";
+
 
 
 use PHPMailer\PHPMailer\PHPMailer;
@@ -34,10 +30,7 @@ use PHPMailer\PHPMailer\Exception;
 require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/Exception.php';
 require 'PHPMailer/src/SMTP.php';
-/*
-require 'path/to/PHPMailer/src/Exception.php';
-require 'path/to/PHPMailer/src/PHPMailer.php';
-require 'path/to/PHPMailer/src/SMTP.php';*/
+
 
 $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
 try {
@@ -59,23 +52,18 @@ try {
     );
 
     //Recipients
-    $mail->setFrom('royal.sport.101@gmail.com', 'Mailer');
+    $mail->setFrom($email_address, $name);
     //$mail->addAddress('royal.sport.101@gmail.com', 'Joe User');     // Add a recipient
     $mail->addAddress('royal.sport.101@gmail.com');               // Name is optional
-    $mail->addReplyTo('info@example.com', 'Information');
+    $mail->addReplyTo($email_address, 'Client');
     $mail->addCC('cc@example.com');
     $mail->addBCC('bcc@example.com');
 
-    //Attachments
-    /*
-    $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-    $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
-      */
 
     //Content
-    $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = 'Here is the subject';
-    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+    $mail->isHTML(true);                        // Set email format to HTML
+    $mail->Subject = 'Enquiry';
+    $mail->Body    =  $message. '<br><br>Name: '.$name. '<br>Phone number: '.$phone. '<br>Email: '.$email_address;
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
     $mail->send();
