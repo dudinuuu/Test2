@@ -27,13 +27,22 @@
   margin-bottom: 1rem;
 }
 
-#Library {
+ #Library {
    content:url('https://i.pinimg.com/originals/e3/29/48/e32948affae374af6166d78f2d8f89f0.png');
    height: 40px;
-   width: 40px;
+   width: : 40px;
 }
 
-#Library:hover {
+#Library:after{
+    background-image: url('https://i.pinimg.com/originals/e3/29/48/e32948affae374af6166d78f2d8f89f0.png');
+    background-size: 40px 40px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    content:"";
+}
+
+ #Library:hover {
    content: url('https://i.pinimg.com/originals/03/8d/e7/038de7b64bafd704b58fa87d5dfd648c.png');
    height: 40px;
    width: 40px;
