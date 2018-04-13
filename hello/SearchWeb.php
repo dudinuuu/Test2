@@ -1,10 +1,10 @@
 <?php
 $xml = simplexml_load_file('./XMLProducts/Products.xml');
-$product = $xml->xpath('/RoyalSport/product/element');
+$search= htmlspecialchars($_POST["search"]);
+$product = $xml->xpath("/RoyalSport/product[@Name='{$search}']/*");
 if(count($product) > 0) { // if found
 
-    $value = (string) $product[3]->attributes()->Value;
+    $value = (string) $product[2]->attributes()->Value;
     include $value;
-    //echo $value; // Full Package
 }
 ?>
