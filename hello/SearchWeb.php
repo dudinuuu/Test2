@@ -1,10 +1,16 @@
 <?php
 $xml = simplexml_load_file('./XMLProducts/Products.xml');
 $search= htmlspecialchars($_POST["search"]);
-$product = $xml->xpath("/RoyalSport/product[@Name='{$search}']/*");
+//$search = 'nike';
+$product = $xml->xpath("/RoyalSport/product[contains(description,'{$search}')]/*");
+//@Name='{$search}' OR
 if(count($product) > 0) { // if found
-
-    $value = (string) $product[2]->attributes()->Value;
-    include $value;
+    if(count($product)>4)
+    {
+        include 'listing.html';
+    }
+    else {
+        include 'detailsPage.html';
+    }
 }
 ?>

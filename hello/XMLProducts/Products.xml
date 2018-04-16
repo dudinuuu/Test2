@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <RoyalSport>
-    <product Name="nike">
-        <element Name="cost" Value="29.99"/>
-        <element Name="description" Value="VeryGood"/>
-        <element Name="url" Value="./XMLProducts/nike.html"/>
+    <product>
+        <name>nike</name>
+        <cost>29.99</cost>
+        <description>VeryGood nike shoes</description>
+        <url>./XMLProducts/nike.html</url>
     </product>
-    <product Name="adidas">
-        <element Name="cost" Value="39.99"/>
-        <element Name="description" Value="Mint condition"/>
-        <element Name="url" Value="./XMLProducts/nike.html"/>
+    <product>
+        <name>adidas</name>
+        <cost>30</cost>
+        <description>VeryGood nike shoes</description>
+        <url>./XMLProducts/adidas.html</url>
     </product>
 </RoyalSport>
