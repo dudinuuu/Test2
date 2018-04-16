@@ -10,7 +10,7 @@
     <product>
         <name>adidas</name>
         <cost>30</cost>
-        <description>VeryGood nike shoes</description>
+        <description>VeryGood nike adidas shoes</description>
         <url>./XMLProducts/adidas.html</url>
     </product>
 </RoyalSport>
