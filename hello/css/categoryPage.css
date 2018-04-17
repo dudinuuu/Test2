@@ -1,14 +1,13 @@
+.snip1268{
+  margin-left: 3.9rem;
+}
 .btn {
     border: none;
-    background-color: inherit;
-    padding: 10px 28px;
-    font-size: 1.3em;
-    cursor: pointer;
     display: inline-block;
 }
 
 /* On mouse-over */
-.btn:hover {background: #ffffff;}
+.btn:hover {background: #FF7700;}
 
 .success {color: green;}
 .info {color: dodgerblue;}

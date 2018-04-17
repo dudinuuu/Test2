@@ -1,9 +1,7 @@
-
 <?php
   $q=$_GET["categoryId"];
   $xml = simplexml_load_file('./XMLProducts/Products.xml');
   $product = $xml->xpath("/RoyalSport/category[@id = '{$q}']/name");
-  echo $q;
 ?>
 
 <!DOCTYPE html>
@@ -19,14 +17,18 @@
     <title>Royal Sport - Find what you need</title>
     <!-- favicon added to the tab-->
     <link rel="icon" href="https://cdn3.iconfinder.com/data/icons/sport-games-1/512/royal-king-queen-luxury-crown-512.png">
+
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Our own css file -->
-    <link href="css/MyCss.css" rel="stylesheet">
-
     <!-- Custom styles for this template -->
-    <link href="css/modern-business.css" rel="stylesheet">
+    <link href="css/shop-homepage.css" rel="stylesheet">
+
+    <!--image buttons css-->
+    <link rel="stylesheet" type="text/css" href="css/snip1268.css">
+
+    <!--add to cart button css-->
+    <link rel="stylesheet" type="text/css" href="css/categoryPage.css">
 
     <!-- navigation bar loader -->
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -35,8 +37,6 @@
       $("#navigation").load("navbar.html");
     });
     </script>
-
-    <link rel="stylesheet" type="text/css" href="css/snip1418.css">
 
   </head>
 
@@ -90,26 +90,104 @@
           </div>
 
           <div class="row">
-
-            <figure class="snip1418"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample85.jpg" alt="sample85"/>
-              <div class="add-to-cart"> <i class="ion-android-add"></i><span>Add to Cart</span></div>
+            <figure class="snip1268">
+              <div class="image">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample4.jpg" alt="sq-sample4"/>
+                <!-- <div class="icons">
+                  <a href="#"><i class="ion-star"></i></a>
+                  <a href="#"> <i class="ion-share"></i></a>
+                  <a href="#"> <i class="ion-search"></i></a>
+                </div> -->
+                <a href="detailsPage.php?productId=1&categoryId=1" class="add-to-cart">Details</a>
+              </div>
               <figcaption>
-                <h3>Pudol Doux</h3>
-                <p>All this modern technology just makes people try to do everything at once.</p>
-                <div class="price">
-                  <s>$24.00</s>$19.00
+                <h2>Denim Shirt</h2>
+                <p>My family is dysfunctional and my parents won't empower me. Consequently I'm not self actualized.</p>
+                <div style= 'float: right;'>
+                <div class="price">$65.00 </div>
                 </div>
-              </figcaption><a href="detailsPage.php?productId=1&categoryId=1"></a>
+                <div style= 'float: left;'><button class="btn default">Add to Cart</button></div>
+              </figcaption>
             </figure>
-            <figure class="snip1418"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample92.jpg" alt="sample92"/>
-              <div class="add-to-cart"> <i class="ion-android-add"></i><span>Add to Cart</span></div>
+
+            <figure class="snip1268">
+              <div class="image">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample4.jpg" alt="sq-sample4"/>
+                <!-- <div class="icons">
+                  <a href="#"><i class="ion-star"></i></a>
+                  <a href="#"> <i class="ion-share"></i></a>
+                  <a href="#"> <i class="ion-search"></i></a>
+                </div> -->
+                <a href="detailsPage.php?productId=1&categoryId=1" class="add-to-cart">Details</a>
+              </div>
               <figcaption>
-                <h3>Zosaisan Invec</h3>
-                <p>If your knees aren't green by the end of the day, you ought to seriously re-examine your life. </p>
-                <div class="price">
-                  <s>$24.00</s>$19.00
+                <h2>Denim Shirt</h2>
+                <p>My family is dysfunctional and my parents won't empower me. Consequently I'm not self actualized.</p>
+                <div style= 'float: right;'>
+                <div class="price">$65.00 </div>
                 </div>
-              </figcaption><a href="#"></a>
+                <div style= 'float: left;'><button class="btn default">Add to Cart</button></div>
+              </figcaption>
+            </figure>
+
+            <figure class="snip1268">
+              <div class="image">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample4.jpg" alt="sq-sample4"/>
+                <!-- <div class="icons">
+                  <a href="#"><i class="ion-star"></i></a>
+                  <a href="#"> <i class="ion-share"></i></a>
+                  <a href="#"> <i class="ion-search"></i></a>
+                </div> -->
+                <a href="detailsPage.php?productId=1&categoryId=1" class="add-to-cart">Details</a>
+              </div>
+              <figcaption>
+                <h2>Denim Shirt</h2>
+                <p>My family is dysfunctional and my parents won't empower me. Consequently I'm not self actualized.</p>
+                <div style= 'float: right;'>
+                <div class="price">$65.00 </div>
+                </div>
+                <div style= 'float: left;'><button class="btn default">Add to Cart</button></div>
+              </figcaption>
+            </figure>
+
+            <figure class="snip1268">
+              <div class="image">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample4.jpg" alt="sq-sample4"/>
+                <!-- <div class="icons">
+                  <a href="#"><i class="ion-star"></i></a>
+                  <a href="#"> <i class="ion-share"></i></a>
+                  <a href="#"> <i class="ion-search"></i></a>
+                </div> -->
+                <a href="detailsPage.php?productId=1&categoryId=1" class="add-to-cart">Details</a>
+              </div>
+              <figcaption>
+                <h2>Denim Shirt</h2>
+                <p>My family is dysfunctional and my parents won't empower me. Consequently I'm not self actualized.</p>
+                <div style= 'float: right;'>
+                <div class="price">$65.00 </div>
+                </div>
+                <div style= 'float: left;'><button class="btn default">Add to Cart</button></div>
+              </figcaption>
+            </figure>
+
+            <figure class="snip1268">
+              <div class="image">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample4.jpg" alt="sq-sample4"/>
+                <!-- <div class="icons">
+                  <a href="#"><i class="ion-star"></i></a>
+                  <a href="#"> <i class="ion-share"></i></a>
+                  <a href="#"> <i class="ion-search"></i></a>
+                </div> -->
+                <a href="detailsPage.php?productId=1&categoryId=1" class="add-to-cart">Details</a>
+              </div>
+              <figcaption>
+                <h2>Denim Shirt</h2>
+                <p>My family is dysfunctional and my parents won't empower me. Consequently I'm not self actualized.</p>
+                <div style= 'float: right;'>
+                <div class="price">$65.00 </div>
+                </div>
+                <div style= 'float: left;'><button class="btn default">Add to Cart</button></div>
+              </figcaption>
             </figure>
           </div>
           <!-- /.row -->
