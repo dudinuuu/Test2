@@ -1,5 +1,10 @@
 
-
+<?php
+  $q=$_GET["categoryId"];
+  $xml = simplexml_load_file('./XMLProducts/Products.xml');
+  $product = $xml->xpath("/RoyalSport/category[@id = '{$q}']/name");
+  echo $q;
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,13 +15,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <?php
-      $q=$_GET["categoryId"];
-      $xml = simplexml_load_file('./XMLProducts/Products.xml');
-      $product = $xml->xpath("/RoyalSport/category[@id = '{$q}']/name");
-      echo $q;
-    ?>
 
     <title>Royal Sport - Find what you need</title>
     <!-- favicon added to the tab-->
@@ -101,7 +99,7 @@
                 <div class="price">
                   <s>$24.00</s>$19.00
                 </div>
-              </figcaption><a href="#"></a>
+              </figcaption><a href="detailsPage.php?categoryId=1 &amp productId=1"></a>
             </figure>
             <figure class="snip1418"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample92.jpg" alt="sample92"/>
               <div class="add-to-cart"> <i class="ion-android-add"></i><span>Add to Cart</span></div>

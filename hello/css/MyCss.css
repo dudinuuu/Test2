@@ -23,8 +23,10 @@
 }
 
 .transbox p {
-  margin-top: 0.7rem;
-  margin-bottom: 1rem;
+  margin-top: 0.4rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: x-large;
 }
 
  #Library {
