@@ -99,7 +99,7 @@
                 <div class="price">
                   <s>$24.00</s>$19.00
                 </div>
-              </figcaption><a href="detailsPage.php?categoryId=1&productId=1"></a>
+              </figcaption><a href="detailsPage.php?productId=1&categoryId=1"></a>
             </figure>
             <figure class="snip1418"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample92.jpg" alt="sample92"/>
               <div class="add-to-cart"> <i class="ion-android-add"></i><span>Add to Cart</span></div>

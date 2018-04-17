@@ -2,11 +2,7 @@
   $q=$_GET["categoryId"];
   $s=$_GET["productId"];
   $xml = simplexml_load_file('./XMLProducts/Products.xml');
-  $product = $xml->xpath("/RoyalSport/category[@id ='{$q}']/product[@id ='{$s}']");
-  print_r ($product);
-  echo count($product);
-  echo $q;
-  echo $s;
+  $product = $xml->xpath("/RoyalSport/category[@id = '{$q}']/product[@id = '{$s}']/name");
 ?>
 
 <head>
@@ -47,7 +43,15 @@
    <div class="container">
 
      <!-- Portfolio Item Heading -->
-     <h1 class="my-4">Page Heading</h1>
+     <h1 class="my-4">
+      <?php
+      $product = $xml->xpath("/RoyalSport/category[@id = '{$q}']/name");
+      echo $product[0];
+      echo " -> ";
+      $product1 = $xml->xpath("/RoyalSport/category[@id = '{$q}']/product[@id = '{$s}']/name");
+      echo $product1[0];
+      ?>
+     </h1>
 
      <!-- Portfolio Item Row -->
      <div class="row">
@@ -58,7 +62,12 @@
 
        <div class="col-md-4">
          <h3 class="my-3">Description</h3>
-         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+         <p>
+           <?php
+           $product = $xml->xpath("/RoyalSport/category[@id = '{$q}']/product[@id = '{$s}']/description");
+           echo $product[0];
+           ?>
+         </p>
          <h3 class="my-3">Project Details</h3>
          <ul>
            <li>Lorem Ipsum</li>
