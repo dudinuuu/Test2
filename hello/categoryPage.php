@@ -1,3 +1,11 @@
+<?php
+  $q=$_GET["categoryId"];
+  $xml = simplexml_load_file('./XMLProducts/Products.xml');
+  $product = $xml->xpath("/RoyalSport/category[@id = '{$q}']");
+  print_r(array_values($product));
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,7 +52,6 @@
       <div class="row">
 
         <div class="col-lg-3">
-
           <h1 class="my-4">Football</h1>
           <div class="list-group">
             <a href="Gloves.html" class="list-group-item">Gloves</a>
@@ -54,7 +61,6 @@
 
         </div>
         <!-- /.col-lg-3 -->
-
         <div class="col-lg-9">
 
           <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
@@ -86,26 +92,27 @@
 
           <div class="row">
 
-          <figure class="snip1418"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample85.jpg" alt="sample85"/>
-            <div class="add-to-cart"> <i class="ion-android-add"></i><span>Add to Cart</span></div>
-            <figcaption>
-              <h3>Pudol Doux</h3>
-              <p>All this modern technology just makes people try to do everything at once.</p>
-              <div class="price">
-                <s>$24.00</s>$19.00
-              </div>
-            </figcaption><a href="#"></a>
-              </figure>
-              <figure class="snip1418"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample92.jpg" alt="sample92"/>
-                <div class="add-to-cart"> <i class="ion-android-add"></i><span>Add to Cart</span></div>
-                <figcaption>
-                  <h3>Zosaisan Invec</h3>
-                  <p>If your knees aren't green by the end of the day, you ought to seriously re-examine your life. </p>
-                  <div class="price">
-                    <s>$24.00</s>$19.00
-                  </div>
-                </figcaption><a href="#"></a>
-              </figure>
+            <figure class="snip1418"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample85.jpg" alt="sample85"/>
+              <div class="add-to-cart"> <i class="ion-android-add"></i><span>Add to Cart</span></div>
+              <figcaption>
+                <h3>Pudol Doux</h3>
+                <p>All this modern technology just makes people try to do everything at once.</p>
+                <div class="price">
+                  <s>$24.00</s>$19.00
+                </div>
+              </figcaption><a href="#"></a>
+            </figure>
+            <figure class="snip1418"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample92.jpg" alt="sample92"/>
+              <div class="add-to-cart"> <i class="ion-android-add"></i><span>Add to Cart</span></div>
+              <figcaption>
+                <h3>Zosaisan Invec</h3>
+                <p>If your knees aren't green by the end of the day, you ought to seriously re-examine your life. </p>
+                <div class="price">
+                  <s>$24.00</s>$19.00
+                </div>
+              </figcaption><a href="#"></a>
+            </figure>
+          </div>
           <!-- /.row -->
 
         </div>
@@ -120,7 +127,7 @@
     <!-- Footer -->
     <footer class="py-5 bg-dark">
       <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+        <p class="m-0 text-center text-white">Copyright &copy; Royal Sport 2017-2018</p>
       </div>
       <!-- /.container -->
     </footer>
@@ -129,6 +136,11 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+    <!-- Contact form JavaScript -->
+    <!-- Do not edit these files! In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
   </body>
 
-</html>
+  </html>
