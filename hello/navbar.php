@@ -1,3 +1,7 @@
+<?php
+  include 'xmlLoader.php';
+ ?>
+
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container">
     <img class="logo" src="https://i.pinimg.com/originals/4c/b0/d6/4cb0d6c95b0102b83cb9f4d5d847424e.png" width="30px" >
@@ -23,9 +27,9 @@
             Categories
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-            <a class="dropdown-item" href="categoryPage.php?categoryId=1">Football</a>
-            <a class="dropdown-item" href="Boxing.html">Boxing</a>
-            <a class="dropdown-item" href="Basketball.html">Basketball</a>
+          <?php foreach ($xml->category as $value){ ?>
+            <a class="dropdown-item" href="categoryPage.php?categoryId=<?php echo $value->id; ?>"><?php echo $value->name; ?></a>
+          <?php } ?>
           </div>
         </li>
         <li class="nav-item">

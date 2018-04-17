@@ -2,7 +2,8 @@
   $q=$_GET["categoryId"];
   $s=$_GET["productId"];
   $xml = simplexml_load_file('./XMLProducts/Products.xml');
-  $product = $xml->xpath("/RoyalSport/category[@id = '{$q}']/product[@id = '{$s}']/name");
+  $product = $xml->xpath("/RoyalSport/category[@id = '{$q}']/product[@id = '{$s}']");
+  print_r($product);
 ?>
 
 <head>
@@ -11,6 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
+
 
   <title>Royal Sport - Find what you need</title>
   <!-- favicon added to the tab-->
@@ -28,7 +30,7 @@
   <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
   <script>
   $(function(){
-    $("#navigation").load("navbar.html");
+    $("#navigation").load("navbar.php");
   });
   </script>
 
@@ -48,8 +50,8 @@
       $product = $xml->xpath("/RoyalSport/category[@id = '{$q}']/name");
       echo $product[0];
       echo " -> ";
-      $product1 = $xml->xpath("/RoyalSport/category[@id = '{$q}']/product[@id = '{$s}']/name");
-      echo $product1[0];
+      $product = $xml->xpath("/RoyalSport/category[@id = '{$q}']/product[@id = '{$s}']/name");
+      echo $product[0];
       ?>
      </h1>
 

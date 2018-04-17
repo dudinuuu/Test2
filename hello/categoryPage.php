@@ -1,7 +1,6 @@
 <?php
   $q=$_GET["categoryId"];
-  $xml = simplexml_load_file('./XMLProducts/Products.xml');
-  $product = $xml->xpath("/RoyalSport/category[@id = '{$q}']/name");
+  include 'xmlLoader.php';
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +33,7 @@
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script>
     $(function(){
-      $("#navigation").load("navbar.html");
+      $("#navigation").load("navbar.php");
     });
     </script>
 
@@ -51,7 +50,7 @@
       <div class="row">
 
         <div class="col-lg-3">
-          <h1 class="my-4"><?php echo $product[0]; ?></h1>
+          <h1 class="my-4"><?php echo $xml->xpath("/RoyalSport/category[id=$q]/name")[0]; ?></h1>
           <div class="list-group">
             <a href="Gloves.html" class="list-group-item">Gloves</a>
             <a href="FootballBoots.html" class="list-group-item">Boots</a>

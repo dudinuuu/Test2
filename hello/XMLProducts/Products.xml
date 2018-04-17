@@ -2,7 +2,8 @@
 
 <RoyalSport>
 
-  <category id="1" name="football">
+  <category>
+    <id>1</id>
     <name>Football</name>
     <product id="1">
         <name>nike</name>
@@ -11,12 +12,23 @@
     </product>
   </category>
 
-  <category id="2" name="boxing">
+  <category>
+    <id>2</id>
     <name>Basketball</name>
     <product id="1">
         <name>adidas</name>
         <cost>30</cost>
         <description>VeryGood nike adidas shoes</description>
+    </product>
+  </category>
+
+  <category>
+    <id>3</id>
+    <name>Boxing</name>
+    <product id="1">
+        <name>puma</name>
+        <cost>50</cost>
+        <description>VeryGood puma gloves</description>
     </product>
   </category>
 
