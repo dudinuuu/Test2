@@ -4,7 +4,7 @@
 
   <category id="1" name="football">
     <name>Football</name>
-    <product id="1">
+    <product>
         <name>nike</name>
         <cost>29.99</cost>
         <description>VeryGood nike shoes</description>
@@ -13,7 +13,7 @@
 
   <category id="2" name="boxing">
     <name>Basketball</name>
-    <product id="1">
+    <product>
         <name>adidas</name>
         <cost>30</cost>
         <description>VeryGood nike adidas shoes</description>

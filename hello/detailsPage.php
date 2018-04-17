@@ -2,7 +2,7 @@
   $q=$_GET["categoryId"];
   $s=$_GET["productId"];
   $xml = simplexml_load_file('./XMLProducts/Products.xml');
-  $product = $xml->xpath("/RoyalSport/category[@id = '{$q}']/product[@id = '{$s}']");
+  $product = $xml->xpath("/RoyalSport/category[@id ='{$q}']/product[@id ='{$s}']");
   print_r ($product);
   echo count($product);
   echo $q;
