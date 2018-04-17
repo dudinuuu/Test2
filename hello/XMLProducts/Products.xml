@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <RoyalSport>
+
   <category id="1" name="football">
+    <name>Football</name>
     <product>
         <name>nike</name>
         <cost>29.99</cost>
         <description>VeryGood nike shoes</description>
-        <url>./XMLProducts/nike.html</url>
     </product>
   </category>
-  <category id="2">
+
+  <category id="2" name="boxing">
+    <name>Basketball</name>
     <product>
         <name>adidas</name>
         <cost>30</cost>
         <description>VeryGood nike adidas shoes</description>
-        <url>./XMLProducts/adidas.html</url>
     </product>
   </category>
+
 </RoyalSport>

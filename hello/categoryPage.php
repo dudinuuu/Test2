@@ -1,9 +1,4 @@
-<?php
-  $q=$_GET["categoryId"];
-  $xml = simplexml_load_file('./XMLProducts/Products.xml');
-  $product = $xml->xpath("/RoyalSport/category[@id = '{$q}']");
-  print_r(array_values($product));
-?>
+
 
 
 <!DOCTYPE html>
@@ -16,6 +11,12 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <?php
+      $q=$_GET["categoryId"];
+      $xml = simplexml_load_file('./XMLProducts/Products.xml');
+      $product = $xml->xpath("/RoyalSport/category[@id = '{$q}']/name");
+      echo $q;
+    ?>
 
     <title>Royal Sport - Find what you need</title>
     <!-- favicon added to the tab-->
@@ -52,7 +53,7 @@
       <div class="row">
 
         <div class="col-lg-3">
-          <h1 class="my-4">Football</h1>
+          <h1 class="my-4"><?php echo $product[0]; ?></h1>
           <div class="list-group">
             <a href="Gloves.html" class="list-group-item">Gloves</a>
             <a href="FootballBoots.html" class="list-group-item">Boots</a>
