@@ -55,7 +55,7 @@
           <h1 class="my-4"><?php echo $xml->xpath("/RoyalSport/category[id=$categoryId]/name")[0]; ?></h1>
           <div class="list-group">
             <?php foreach ($xml->xpath("/RoyalSport/category[id=$categoryId]/subcategory") as $value){ ?>
-            <a href="listing.php?pathName=<?php echo $value->name; ?>" class="list-group-item"><?php echo $value->name; ?></a>
+            <a href="listing.php?categoryId=<?php echo $categoryId; ?>&pathId=<?php echo $value->id; ?>" class="list-group-item"><?php echo $value->name; ?></a>
             <?php } ?>
           </div>
 

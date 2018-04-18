@@ -1,37 +1,47 @@
+<?php
+  $categoryId=$_GET["categoryId"];
+  $pathId=$_GET["pathId"];
+  include 'xmlLoader.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
+  <title>Royal Sport - Find what you need</title>
+  <!-- favicon added to the tab-->
+  <link rel="icon" href="https://cdn3.iconfinder.com/data/icons/sport-games-1/512/royal-king-queen-luxury-crown-512.png">
 
-    <title>Royal Sport - Find what you need</title>
-    <!-- favicon added to the tab-->
-    <link rel="icon" href="https://cdn3.iconfinder.com/data/icons/sport-games-1/512/royal-king-queen-luxury-crown-512.png">
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Our own css file -->
-    <link href="css/MyCss.css" rel="stylesheet">
+  <!-- Our own css file -->
+  <link href="css/MyCss.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="css/modern-business.css" rel="stylesheet">
+  <!--image buttons css-->
+  <link rel="stylesheet" type="text/css" href="css/snip1268.css">
 
-    <!-- navigation bar loader -->
-    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <script>
-    $(function(){
-      $("#navigation").load("navbar.php");
-    });
-    </script>
+  <!-- Custom styles for this template -->
+  <link href="css/shop-homepage.css" rel="stylesheet">
 
-  <link rel="stylesheet" type="text/css" href="css/snip1418.css">
+  <!-- Custom styles for this template -->
+  <link href="css/categoryPage.css" rel="stylesheet">
 
-  </head>
+  <!-- navigation bar loader -->
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script>
+  $(function(){
+    $("#navigation").load("navbar.php");
+  });
+  </script>
+
+</head>
 
   <body>
 
@@ -45,65 +55,30 @@
 
         <div class="col-lg-3">
 
-          <h1 class="my-4">Boxing Gloves</h1>
+          <h1 class="my-4"><?php echo $xml->xpath("/RoyalSport/category[id=$categoryId]/subcategory[id=$pathId]/name")[0] ?></h1>
 
         </div>
         <!-- /.col-lg-3 -->
 
           <div class="row">
 
-
-
-            <figure class="snip1418"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample85.jpg" alt="sample85"/>
-              <div class="add-to-cart"> <i class="ion-android-add"></i><span>Add to Cart</span></div>
-              <figcaption>
-                <h3>Pudol Doux</h3>
-                <p>All this modern technology just makes people try to do everything at once.</p>
-                <div class="price">
-                  <s>$24.00</s>$19.00
+            <!-- Creating a figure for each product using foreach -->
+            <?php foreach ($xml->xpath("/RoyalSport/category[id=$categoryId]/subcategory[id=$pathId]/product") as $value){ ?>
+              <figure class="snip1268">
+                <div class="image">
+                  <img src="<?php echo $value->image; ?>" alt="sq-sample4"/>
+                  <a href="detailsPage.php?categoryId=<?php echo $categoryId; ?>&productId=<?php echo $value->id; ?>" class="add-to-cart">Details</a>
                 </div>
-              </figcaption><a href="#"></a>
-                </figure>
-                <figure class="snip1418"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample92.jpg" alt="sample92"/>
-                  <div class="add-to-cart"> <i class="ion-android-add"></i><span>Add to Cart</span></div>
-                  <figcaption>
-                    <h3>Zosaisan Invec</h3>
-                    <p>If your knees aren't green by the end of the day, you ought to seriously re-examine your life. </p>
-                    <div class="price">
-                      <s>$24.00</s>$19.00
-                    </div>
-                  </figcaption><a href="#"></a>
-                </figure>
-                <figure class="snip1418"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample92.jpg" alt="sample92"/>
-                  <div class="add-to-cart"> <i class="ion-android-add"></i><span>Add to Cart</span></div>
-                  <figcaption>
-                    <h3>Zosaisan Invec</h3>
-                    <p>If your knees aren't green by the end of the day, you ought to seriously re-examine your life. </p>
-                    <div class="price">
-                      <s>$24.00</s>$19.00
-                    </div>
-                  </figcaption><a href="#"></a>
-                </figure>
-                <figure class="snip1418"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample92.jpg" alt="sample92"/>
-                  <div class="add-to-cart"> <i class="ion-android-add"></i><span>Add to Cart</span></div>
-                  <figcaption>
-                    <h3>Zosaisan Invec</h3>
-                    <p>If your knees aren't green by the end of the day, you ought to seriously re-examine your life. </p>
-                    <div class="price">
-                      <s>$24.00</s>$19.00
-                    </div>
-                  </figcaption><a href="#"></a>
-                </figure>
-                <figure class="snip1418"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample92.jpg" alt="sample92"/>
-                  <div class="add-to-cart"> <i class="ion-android-add"></i><span>Add to Cart</span></div>
-                  <figcaption>
-                    <h3>Zosaisan Invec</h3>
-                    <p>If your knees aren't green by the end of the day, you ought to seriously re-examine your life. </p>
-                    <div class="price">
-                      <s>$24.00</s>$19.00
-                    </div>
-                  </figcaption><a href="#"></a>
-                </figure>
+                <figcaption>
+                  <h2><?php echo $value->name; ?></h2>
+                  <p><?php echo $value->description; ?></p>
+                  <div style= 'float: right;'>
+                  <div class="price"><?php echo "$$value->cost"; ?></div>
+                  </div>
+                  <div style= 'float: left;'><button class="btn default">Add to Cart</button></div>
+                </figcaption>
+              </figure>
+            <?php } ?>
           <!-- /.row -->
 
         </div>

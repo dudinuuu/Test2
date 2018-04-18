@@ -1,9 +1,8 @@
 <?php
-  $q=$_GET["categoryId"];
-  $s=$_GET["productId"];
+  $categoryId=$_GET["categoryId"];
+  $productId=$_GET["productId"];
   $xml = simplexml_load_file('./XMLProducts/Products.xml');
-  $product = $xml->xpath("/RoyalSport/category[@id = '{$q}']/product[@id = '{$s}']");
-  print_r($product);
+  $product = $xml->xpath("/RoyalSport/category[id = '{$categoryId}']/product[id = '{$productId}']");
 ?>
 
 <head>
@@ -47,11 +46,9 @@
      <!-- Portfolio Item Heading -->
      <h1 class="my-4">
       <?php
-      $product = $xml->xpath("/RoyalSport/category[@id = '{$q}']/name");
-      echo $product[0];
+      echo $xml->xpath("/RoyalSport/category[id = '{$categoryId}']/name")[0];
       echo " -> ";
-      $product = $xml->xpath("/RoyalSport/category[@id = '{$q}']/product[@id = '{$s}']/name");
-      echo $product[0];
+      echo $xml->xpath("/RoyalSport/category[id = '{$categoryId}']/subcategory/product[id = '{$productId}']/name")[0];
       ?>
      </h1>
 
@@ -59,17 +56,14 @@
      <div class="row">
 
        <div class="col-md-8">
-         <img class="img-fluid" src="http://placehold.it/750x500" alt="">
+         <img class="img-fluid" src="<?php echo $xml->xpath("/RoyalSport/category[id = '{$categoryId}']/subcategory/product[id = '{$productId}']/image")[0]; ?>" alt="">
        </div>
 
        <div class="col-md-4">
+         <h3 class="my-3">Cost</h3>
+         <p> <?php echo '$'.$xml->xpath("/RoyalSport/category[id = '{$categoryId}']/subcategory/product[id = '{$productId}']/cost")[0];?> </p>
          <h3 class="my-3">Description</h3>
-         <p>
-           <?php
-           $product = $xml->xpath("/RoyalSport/category[@id = '{$q}']/product[@id = '{$s}']/description");
-           echo $product[0];
-           ?>
-         </p>
+         <p> <?php echo $xml->xpath("/RoyalSport/category[id = '{$categoryId}']/subcategory/product[id = '{$productId}']/description")[0];?> </p>
          <h3 class="my-3">Project Details</h3>
          <ul>
            <li>Lorem Ipsum</li>
@@ -83,7 +77,7 @@
      <!-- /.row -->
 
      <!-- Related Projects Row -->
-     <h3 class="my-4">Related Projects</h3>
+     <h3 class="my-4">Related Items</h3>
 
      <div class="row">
 

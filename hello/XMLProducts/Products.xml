@@ -10,6 +10,7 @@
     <carouselImage>https://i.pinimg.com/originals/07/60/f2/0760f2c24281533680fff168b41c3281.jpg</carouselImage>
     <subcategory>
       <name>boots</name>
+      <id>1</id>
       <product>
           <id>1</id>
           <name>nike n-50</name>
@@ -20,6 +21,7 @@
     </subcategory>
     <subcategory>
       <name>gear</name>
+      <id>2</id>
       <product>
           <id>2</id>
           <name>nike t-shirt</name>
@@ -30,6 +32,7 @@
     </subcategory>
     <subcategory>
       <name>gloves</name>
+      <id>3</id>
       <product>
           <id>3</id>
           <name>nike extreme gloves</name>
