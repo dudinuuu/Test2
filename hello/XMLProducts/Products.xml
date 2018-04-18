@@ -26,7 +26,7 @@
           <id>2</id>
           <name>nike t-shirt</name>
           <cost>19.99</cost>
-          <description>Very Good nike T-shirt</description>
+          <description>Very Good  T-shirt</description>
           <image>https://i.pinimg.com/736x/ba/6e/af/ba6eafc52c24f16564a9729692af3327--zoom-graphic-tees.jpg</image>
       </product>
     </subcategory>
@@ -37,7 +37,7 @@
           <id>3</id>
           <name>nike extreme gloves</name>
           <cost>99.99</cost>
-          <description>perfect nike gloves</description>
+          <description>perfect  gloves</description>
           <image>http://www.labodegacardiff.co.uk/images/labod/nike-gloves-game-royal-volt-lightweight-rival-run-glove-mens-lightweight-mittens-by-running-60FD.jpg</image>
       </product>
     </subcategory>
