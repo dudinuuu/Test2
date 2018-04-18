@@ -1,45 +1,47 @@
 <?php
-  $q=$_GET["categoryId"];
+  $categoryId=$_GET["categoryId"];
   include 'xmlLoader.php';
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <title>Royal Sport - Find what you need</title>
-    <!-- favicon added to the tab-->
-    <link rel="icon" href="https://cdn3.iconfinder.com/data/icons/sport-games-1/512/royal-king-queen-luxury-crown-512.png">
+  <title>Royal Sport - Find what you need</title>
+  <!-- favicon added to the tab-->
+  <link rel="icon" href="https://cdn3.iconfinder.com/data/icons/sport-games-1/512/royal-king-queen-luxury-crown-512.png">
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="css/shop-homepage.css" rel="stylesheet">
+  <!-- Our own css file -->
+  <link href="css/MyCss.css" rel="stylesheet">
 
-    <!--image buttons css-->
-    <link rel="stylesheet" type="text/css" href="css/snip1268.css">
+  <!--image buttons css-->
+  <link rel="stylesheet" type="text/css" href="css/snip1268.css">
 
-    <!--add to cart button css-->
-    <link rel="stylesheet" type="text/css" href="css/categoryPage.css">
+  <!-- Custom styles for this template -->
+  <link href="css/shop-homepage.css" rel="stylesheet">
 
-    <!-- navigation bar loader -->
-    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <script>
-    $(function(){
-      $("#navigation").load("navbar.php");
-    });
-    </script>
+  <!-- Custom styles for this template -->
+  <link href="css/categoryPage.css" rel="stylesheet">
 
-  </head>
+  <!-- navigation bar loader -->
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script>
+  $(function(){
+    $("#navigation").load("navbar.php");
+  });
+  </script>
 
-  <body>
+</head>
+<body>
 
     <!-- Navigation -->
      <div id="navigation"></div>
@@ -50,11 +52,11 @@
       <div class="row">
 
         <div class="col-lg-3">
-          <h1 class="my-4"><?php echo $xml->xpath("/RoyalSport/category[id=$q]/name")[0]; ?></h1>
+          <h1 class="my-4"><?php echo $xml->xpath("/RoyalSport/category[id=$categoryId]/name")[0]; ?></h1>
           <div class="list-group">
-            <a href="Gloves.html" class="list-group-item">Gloves</a>
-            <a href="FootballBoots.html" class="list-group-item">Boots</a>
-            <a href="Gear.html" class="list-group-item">Gear</a>
+            <?php foreach ($xml->xpath("/RoyalSport/category[id=$categoryId]/subcategory") as $value){ ?>
+            <a href="listing.php?pathName=<?php echo $value->name; ?>" class="list-group-item"><?php echo $value->name; ?></a>
+            <?php } ?>
           </div>
 
         </div>
@@ -69,13 +71,13 @@
             </ol>
             <div class="carousel-inner" role="listbox">
               <div class="carousel-item active">
-                <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="First slide">
+                <img class="d-block img-fluid" src="<?php echo $xml->xpath("/RoyalSport/category[id=$categoryId]/carouselImage")[0]; ?>" alt="First slide">
               </div>
               <div class="carousel-item">
-                <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Second slide">
+                <img class="d-block img-fluid" src="<?php echo $xml->xpath("/RoyalSport/category[id=$categoryId]/carouselImage")[1]; ?>" alt="Second slide">
               </div>
               <div class="carousel-item">
-                <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Third slide">
+                <img class="d-block img-fluid" src="<?php echo $xml->xpath("/RoyalSport/category[id=$categoryId]/carouselImage")[2]; ?>" alt="Third slide">
               </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -89,105 +91,25 @@
           </div>
 
           <div class="row">
-            <figure class="snip1268">
-              <div class="image">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample4.jpg" alt="sq-sample4"/>
-                <!-- <div class="icons">
-                  <a href="#"><i class="ion-star"></i></a>
-                  <a href="#"> <i class="ion-share"></i></a>
-                  <a href="#"> <i class="ion-search"></i></a>
-                </div> -->
-                <a href="detailsPage.php?productId=1&categoryId=1" class="add-to-cart">Details</a>
-              </div>
-              <figcaption>
-                <h2>Denim Shirt</h2>
-                <p>My family is dysfunctional and my parents won't empower me. Consequently I'm not self actualized.</p>
-                <div style= 'float: right;'>
-                <div class="price">$65.00 </div>
-                </div>
-                <div style= 'float: left;'><button class="btn default">Add to Cart</button></div>
-              </figcaption>
-            </figure>
 
-            <figure class="snip1268">
-              <div class="image">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample4.jpg" alt="sq-sample4"/>
-                <!-- <div class="icons">
-                  <a href="#"><i class="ion-star"></i></a>
-                  <a href="#"> <i class="ion-share"></i></a>
-                  <a href="#"> <i class="ion-search"></i></a>
-                </div> -->
-                <a href="detailsPage.php?productId=1&categoryId=1" class="add-to-cart">Details</a>
-              </div>
-              <figcaption>
-                <h2>Denim Shirt</h2>
-                <p>My family is dysfunctional and my parents won't empower me. Consequently I'm not self actualized.</p>
-                <div style= 'float: right;'>
-                <div class="price">$65.00 </div>
+            <!-- Creating a figure for each product using foreach -->
+            <?php foreach ($xml->xpath("/RoyalSport/category[id=$categoryId]/subcategory/product") as $value){ ?>
+              <figure class="snip1268">
+                <div class="image">
+                  <img src="<?php echo $value->image; ?>" alt="sq-sample4"/>
+                  <a href="detailsPage.php?categoryId=<?php echo $categoryId; ?>&productId=<?php echo $value->id; ?>" class="add-to-cart">Details</a>
                 </div>
-                <div style= 'float: left;'><button class="btn default">Add to Cart</button></div>
-              </figcaption>
-            </figure>
+                <figcaption>
+                  <h2><?php echo $value->name; ?></h2>
+                  <p><?php echo $value->description; ?></p>
+                  <div style= 'float: right;'>
+                  <div class="price"><?php echo "$$value->cost"; ?></div>
+                  </div>
+                  <div style= 'float: left;'><button class="btn default">Add to Cart</button></div>
+                </figcaption>
+              </figure>
+            <?php } ?>
 
-            <figure class="snip1268">
-              <div class="image">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample4.jpg" alt="sq-sample4"/>
-                <!-- <div class="icons">
-                  <a href="#"><i class="ion-star"></i></a>
-                  <a href="#"> <i class="ion-share"></i></a>
-                  <a href="#"> <i class="ion-search"></i></a>
-                </div> -->
-                <a href="detailsPage.php?productId=1&categoryId=1" class="add-to-cart">Details</a>
-              </div>
-              <figcaption>
-                <h2>Denim Shirt</h2>
-                <p>My family is dysfunctional and my parents won't empower me. Consequently I'm not self actualized.</p>
-                <div style= 'float: right;'>
-                <div class="price">$65.00 </div>
-                </div>
-                <div style= 'float: left;'><button class="btn default">Add to Cart</button></div>
-              </figcaption>
-            </figure>
-
-            <figure class="snip1268">
-              <div class="image">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample4.jpg" alt="sq-sample4"/>
-                <!-- <div class="icons">
-                  <a href="#"><i class="ion-star"></i></a>
-                  <a href="#"> <i class="ion-share"></i></a>
-                  <a href="#"> <i class="ion-search"></i></a>
-                </div> -->
-                <a href="detailsPage.php?productId=1&categoryId=1" class="add-to-cart">Details</a>
-              </div>
-              <figcaption>
-                <h2>Denim Shirt</h2>
-                <p>My family is dysfunctional and my parents won't empower me. Consequently I'm not self actualized.</p>
-                <div style= 'float: right;'>
-                <div class="price">$65.00 </div>
-                </div>
-                <div style= 'float: left;'><button class="btn default">Add to Cart</button></div>
-              </figcaption>
-            </figure>
-
-            <figure class="snip1268">
-              <div class="image">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample4.jpg" alt="sq-sample4"/>
-                <!-- <div class="icons">
-                  <a href="#"><i class="ion-star"></i></a>
-                  <a href="#"> <i class="ion-share"></i></a>
-                  <a href="#"> <i class="ion-search"></i></a>
-                </div> -->
-                <a href="detailsPage.php?productId=1&categoryId=1" class="add-to-cart">Details</a>
-              </div>
-              <figcaption>
-                <h2>Denim Shirt</h2>
-                <p>My family is dysfunctional and my parents won't empower me. Consequently I'm not self actualized.</p>
-                <div style= 'float: right;'>
-                <div class="price">$65.00 </div>
-                </div>
-                <div style= 'float: left;'><button class="btn default">Add to Cart</button></div>
-              </figcaption>
-            </figure>
           </div>
           <!-- /.row -->
 
@@ -219,4 +141,4 @@
 
   </body>
 
-  </html>
+</html>

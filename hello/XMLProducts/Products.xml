@@ -5,17 +5,46 @@
   <category>
     <id>1</id>
     <name>Football</name>
-    <product id="1">
-        <name>nike</name>
-        <cost>29.99</cost>
-        <description>VeryGood nike shoes</description>
-    </product>
+    <carouselImage>https://i.pinimg.com/originals/81/94/05/8194050f12107a83e00a01b0fbb90a09.jpg</carouselImage>
+    <carouselImage>https://i.pinimg.com/originals/95/b3/94/95b3945344c1cd356ee6fdbe735b197d.jpg</carouselImage>
+    <carouselImage>https://i.pinimg.com/originals/07/60/f2/0760f2c24281533680fff168b41c3281.jpg</carouselImage>
+    <subcategory>
+      <name>boots</name>
+      <product>
+          <id>1</id>
+          <name>nike n-50</name>
+          <cost>29.99</cost>
+          <description>Very Good nike shoes</description>
+          <image>https://i.pinimg.com/736x/02/bf/87/02bf87d6ade05c685e796eae16dec81c--tennis-nike-mujer-roshe.jpg</image>
+      </product>
+    </subcategory>
+    <subcategory>
+      <name>gear</name>
+      <product>
+          <id>2</id>
+          <name>nike t-shirt</name>
+          <cost>19.99</cost>
+          <description>Very Good nike T-shirt</description>
+          <image>https://i.pinimg.com/736x/ba/6e/af/ba6eafc52c24f16564a9729692af3327--zoom-graphic-tees.jpg</image>
+      </product>
+    </subcategory>
+    <subcategory>
+      <name>gloves</name>
+      <product>
+          <id>3</id>
+          <name>nike extreme gloves</name>
+          <cost>99.99</cost>
+          <description>perfect nike gloves</description>
+          <image>http://www.labodegacardiff.co.uk/images/labod/nike-gloves-game-royal-volt-lightweight-rival-run-glove-mens-lightweight-mittens-by-running-60FD.jpg</image>
+      </product>
+    </subcategory>
   </category>
 
   <category>
     <id>2</id>
     <name>Basketball</name>
-    <product id="1">
+    <product>
+        <id>1</id>
         <name>adidas</name>
         <cost>30</cost>
         <description>VeryGood nike adidas shoes</description>
@@ -25,7 +54,8 @@
   <category>
     <id>3</id>
     <name>Boxing</name>
-    <product id="1">
+    <product>
+        <id>1</id>
         <name>puma</name>
         <cost>50</cost>
         <description>VeryGood puma gloves</description>
