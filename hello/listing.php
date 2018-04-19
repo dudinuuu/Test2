@@ -1,7 +1,14 @@
 <?php
-  $categoryId=$_GET["categoryId"];
-  $pathId=$_GET["pathId"];
   include 'xmlLoader.php';
+  if(isset($_GET["categoryId"])){
+    $categoryId=$_GET["categoryId"];
+  }
+  if(isset($_GET["pathId"])){
+    $pathId=$_GET["pathId"];
+  }
+  if(isset($_GET["search"])){
+    $search=$_GET["search"];
+  }
 ?>
 
 <!DOCTYPE html>
@@ -54,31 +61,61 @@
       <div class="row">
 
         <div class="col-lg-3">
+          <?php if(isset($categoryId) && isset($pathId)){ ?>
+            <h1 class="my-4"><?php echo $xml->xpath("/RoyalSport/category[id=$categoryId]/subcategory[id=$pathId]/name")[0]; ?></h1>
+          <?php }
+          else{ ?>
+            <h1 class="my-4"><?php echo $search; ?></h1>
+          <?php } ?>
 
-          <h1 class="my-4"><?php echo $xml->xpath("/RoyalSport/category[id=$categoryId]/subcategory[id=$pathId]/name")[0] ?></h1>
 
         </div>
         <!-- /.col-lg-3 -->
 
           <div class="row">
+            <?php
+              if(isset($search)){
+                $product = $xml->xpath("/RoyalSport/category/subcategory/product[contains(description,'{$search}')]");
+                $cid = $xml->xpath("/RoyalSport/category/subcategory/product[contains(description,'{$search}')]/parent::*/parent::*/id")[0];
+                $pid = $xml->xpath("/RoyalSport/category/subcategory/product[contains(description,'{$search}')]/id")[0];
+                if(count($product) <= 1)header("Location: detailsPage.php?categoryId=".$cid."&productId=".$pid);
 
-            <!-- Creating a figure for each product using foreach -->
-            <?php foreach ($xml->xpath("/RoyalSport/category[id=$categoryId]/subcategory[id=$pathId]/product") as $value){ ?>
-              <figure class="snip1268">
-                <div class="image">
-                  <img src="<?php echo $value->image; ?>" alt="sq-sample4"/>
-                  <a href="detailsPage.php?categoryId=<?php echo $categoryId; ?>&productId=<?php echo $value->id; ?>" class="add-to-cart">Details</a>
-                </div>
-                <figcaption>
-                  <h2><?php echo $value->name; ?></h2>
-                  <p><?php echo $value->description; ?></p>
-                  <div style= 'float: right;'>
-                  <div class="price"><?php echo "$$value->cost"; ?></div>
-                  </div>
-                  <div style= 'float: left;'><button class="btn default">Add to Cart</button></div>
-                </figcaption>
-              </figure>
-            <?php } ?>
+                foreach ($product as $value){ ?>
+                  <figure class="snip1268">
+                    <div class="image">
+                      <img src="<?php echo $value->image; ?>" alt="sq-sample4"/>
+                      <a href="detailsPage.php?categoryId=<?php echo $cid; ?>&productId=<?php echo $pid; ?>" class="add-to-cart">Details</a>
+                    </div>
+                    <figcaption>
+                      <h2><?php echo $value->name; ?></h2>
+                      <p><?php echo $value->description; ?></p>
+                      <div style= 'float: right;'>
+                      <div class="price"><?php echo "$$value->cost"; ?></div>
+                      </div>
+                      <div style= 'float: left;'><button class="btn default">Add to Cart</button></div>
+                    </figcaption>
+                  </figure>
+                <?php }
+              }
+              else{
+                foreach ($xml->xpath("/RoyalSport/category[id=$categoryId]/subcategory[id=$pathId]/product") as $value){ ?>
+                  <figure class="snip1268">
+                    <div class="image">
+                      <img src="<?php echo $value->image; ?>" alt="sq-sample4"/>
+                      <a href="detailsPage.php?categoryId=<?php echo $cid; ?>&productId=<?php echo $pid; ?>" class="add-to-cart">Details</a>
+                    </div>
+                    <figcaption>
+                      <h2><?php echo $value->name; ?></h2>
+                      <p><?php echo $value->description; ?></p>
+                      <div style= 'float: right;'>
+                      <div class="price"><?php echo "$$value->cost"; ?></div>
+                      </div>
+                      <div style= 'float: left;'><button class="btn default">Add to Cart</button></div>
+                    </figcaption>
+                  </figure>
+              <?php }
+            } ?>
+
           <!-- /.row -->
 
         </div>

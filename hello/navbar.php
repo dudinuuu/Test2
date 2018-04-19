@@ -16,7 +16,7 @@
         <li>
             <div class="header">
               <div class="search_bar">
-                <form action="SearchWeb.php" method="post">
+                <form action="listing.php" method="get">
                   <input type="text" name="search" placeholder="Search Website..">
                 </form>
               </div>
