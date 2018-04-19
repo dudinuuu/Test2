@@ -1,8 +1,7 @@
 <?php
 ini_set("auto_detect_line_endings", true);
 $xml = simplexml_load_file('./XMLProducts/Products.xml');
-//$search= htmlspecialchars($_POST["search"]);
-$search = 'nike';
+$search= htmlspecialchars($_POST["search"]);
 $product = $xml->xpath("/RoyalSport/category/subcategory/product[contains(description,'{$search}')]");
 //print_r($product);
 $cid = $xml->xpath("/RoyalSport/category/subcategory/product[contains(description,'{$search}')]/parent::*/parent::*/id")[0];
