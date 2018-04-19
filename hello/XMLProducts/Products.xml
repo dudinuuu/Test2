@@ -31,7 +31,7 @@
       </product>
     </subcategory>
     <subcategory>
-      <name>gloves</name>
+      <name>Gloves</name>
       <id>3</id>
       <product>
           <id>3</id>
@@ -46,12 +46,43 @@
   <category>
     <id>2</id>
     <name>Basketball</name>
-    <product>
-        <id>1</id>
-        <name>adidas</name>
-        <cost>30</cost>
-        <description>VeryGood nike adidas shoes</description>
-    </product>
+    <!-- https://i.pinimg.com/564x/0e/9c/ba/0e9cbad3885a5e561431155458ae0245.jpg -->
+    <carouselImage>https://i.pinimg.com/originals/0e/9c/ba/0e9cbad3885a5e561431155458ae0245.jpg</carouselImage>
+    <carouselImage>https://i.pinimg.com/originals/b2/cd/b7/b2cdb7dff3828f5a00f86642e4165f5a.jpg</carouselImage>
+    <carouselImage>https://i.pinimg.com/originals/08/26/76/0826766066b10f85fd2b18ac29f1515f.jpg</carouselImage>
+    <subcategory>
+      <name>boots</name>
+      <id>1</id>
+      <product>
+          <id>1</id>
+          <name>nike kyrie 4</name>
+          <cost>77.97</cost>
+          <description>Mhux worth it nike shoes</description>
+          <image>https://i.pinimg.com/564x/4b/99/a2/4b99a20eba1607dcbb90d78a3a094189.jpg</image>
+      </product>
+    </subcategory>
+    <subcategory>
+      <name>gear</name>
+      <id>2</id>
+      <product>
+          <id>2</id>
+          <name>Celtics Fanatics shirt</name>
+          <cost>29.99</cost>
+          <description>Mhux worth it basketball celtics shirt</description>
+          <image>https://i.pinimg.com/564x/f8/c2/a6/f8c2a62d1fd423dc244ec2dfc188e65c.jpg</image>
+      </product>
+    </subcategory>
+    <subcategory>
+      <name>Balls</name>
+      <id>3</id>
+      <product>
+          <id>3</id>
+          <name>Nike Basketball</name>
+          <cost>11.99</cost>
+          <description>mhux worth it bouncy nike ball</description>
+          <image>https://i.pinimg.com/564x/f6/80/49/f6804982750d89554dfea3187c6d0ae5.jpg</image>
+      </product>
+    </subcategory>
   </category>
 
   <category>
