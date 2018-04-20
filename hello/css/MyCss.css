@@ -1,3 +1,10 @@
+.btn-details{
+  background-color: #FF7700;
+  border: none;
+}
+.btn-details:hover{
+  background-color: #D76400;
+}
 
 .card {
     border: none;
@@ -45,7 +52,7 @@
 }
 
  #Library:hover {
-   content: url('https://i.pinimg.com/originals/03/8d/e7/038de7b64bafd704b58fa87d5dfd648c.png');
+   content: url('https://i.pinimg.com/originals/0a/f8/66/0af866eeda2cc44b64062a34cc7674bb.png');
    height: 40px;
    width: 40px;
 }

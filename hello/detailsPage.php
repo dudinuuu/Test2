@@ -64,13 +64,12 @@
          <p> <?php echo '$'.$xml->xpath("/RoyalSport/category[id = '{$categoryId}']/subcategory/product[id = '{$productId}']/cost")[0];?> </p>
          <h3 class="my-3">Description</h3>
          <p> <?php echo $xml->xpath("/RoyalSport/category[id = '{$categoryId}']/subcategory/product[id = '{$productId}']/description")[0];?> </p>
-         <h3 class="my-3">Project Details</h3>
-         <ul>
-           <li>Lorem Ipsum</li>
-           <li>Dolor Sit Amet</li>
-           <li>Consectetur</li>
-           <li>Adipiscing Elit</li>
-         </ul>
+         <div class="button">
+           <form method="get" action="checkout.php">
+             <input href="checkout.php" type="submit" value="Add to cart" class="btn btn-primary btn-details" ></input>
+           </form>
+         </div>
+
        </div>
 
      </div>
@@ -82,29 +81,18 @@
      <div class="row">
 
        <div class="col-md-3 col-sm-6 mb-4">
-         <a href="#">
-           <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-         </a>
+         <?php
+          $rcid = count($xml->xpath("/RoyalSport/category/id"));
+          echo $rcid;
+          $rpid =count($xml->xpath("/RoyalSport/category[id ='{$rcid}']/subcategory/product"));
+          echo $rpid;
+          for($count = 0; $count<5 ; $count++){
+         ?>
+           <a href="detailsPage.php?categoryId=<?php echo $rcid; ?>&productId=<?php echo $rpid; ?>">
+             <img class="img-fluid" src="<?php echo $xml->xpath("/RoyalSport/category[id ='{$rcid}']/subcategory/product[id ='{$rpid}']/image"); ?>" alt="">
+           </a>
+         <?php } ?>
        </div>
-
-       <div class="col-md-3 col-sm-6 mb-4">
-         <a href="#">
-           <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-         </a>
-       </div>
-
-       <div class="col-md-3 col-sm-6 mb-4">
-         <a href="#">
-           <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-         </a>
-       </div>
-
-       <div class="col-md-3 col-sm-6 mb-4">
-         <a href="#">
-           <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-         </a>
-       </div>
-
      </div>
      <!-- /.row -->
 

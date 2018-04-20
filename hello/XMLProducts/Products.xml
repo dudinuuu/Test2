@@ -85,7 +85,7 @@
     </subcategory>
   </category>
 
-  <category>
+  <!-- <category>
     <id>3</id>
     <name>Boxing</name>
     <product>
@@ -94,6 +94,6 @@
         <cost>50</cost>
         <description>VeryGood puma gloves</description>
     </product>
-  </category>
+  </category> -->
 
 </RoyalSport>
