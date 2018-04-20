@@ -1,9 +1,21 @@
-.btn-details{
-  background-color: #FF7700;
-  border: none;
+.btn-details {
+    border: none;
+    display: inline-block;
 }
-.btn-details:hover{
-  background-color: #D76400;
+
+/* On mouse-over */
+.btn-details:hover {background: #FF7700;}
+
+.success {color: green;}
+.info {color: dodgerblue;}
+.warning {color: orange;}
+.danger {color: red;}
+.default {color: black;}
+
+.price {
+  font-size: 1.3em;
+  opacity: 0.5;
+  font-weight: 700;
 }
 
 .card {

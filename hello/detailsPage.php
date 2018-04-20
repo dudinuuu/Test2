@@ -66,7 +66,7 @@
          <p> <?php echo $xml->xpath("/RoyalSport/category[id = '{$categoryId}']/subcategory/product[id = '{$productId}']/description")[0];?> </p>
          <div class="button">
            <form method="get" action="checkout.php">
-             <input href="checkout.php" type="submit" value="Add to cart" class="btn btn-primary btn-details" ></input>
+             <input href="checkout.php" type="submit" value="Add to cart" class="btn btn-details" ></input>
            </form>
          </div>
 
@@ -80,19 +80,21 @@
 
      <div class="row">
 
-       <div class="col-md-3 col-sm-6 mb-4">
-         <?php
-          $rcid = count($xml->xpath("/RoyalSport/category/id"));
-          echo $rcid;
-          $rpid =count($xml->xpath("/RoyalSport/category[id ='{$rcid}']/subcategory/product"));
-          echo $rpid;
-          for($count = 0; $count<5 ; $count++){
+       <?php
+          for($count = 0; $count<4 ; $count++){
+          $rcid = rand(1,count($xml->xpath("/RoyalSport/category/id"))); //pick a random category
+          $rpid =rand(1,count($xml->xpath("/RoyalSport/category[id ='{$rcid}']/subcategory/product"))); //pick a random product
          ?>
-           <a href="detailsPage.php?categoryId=<?php echo $rcid; ?>&productId=<?php echo $rpid; ?>">
-             <img class="img-fluid" src="<?php echo $xml->xpath("/RoyalSport/category[id ='{$rcid}']/subcategory/product[id ='{$rpid}']/image"); ?>" alt="">
-           </a>
+            <div class="col-md-3 col-sm-6 mb-4">
+               <a href="detailsPage.php?categoryId=<?php echo $rcid; ?>&productId=<?php echo $rpid; ?>">
+                 <img class="img-fluid" src="<?php echo $xml->xpath("/RoyalSport/category[id ='{$rcid}']/subcategory/product[id ='{$rpid}']/image")[0]; ?>" alt="">
+               </a>
+               <h4><?php echo $xml->xpath("/RoyalSport/category[id ='{$rcid}']/subcategory/product[id ='{$rpid}']/name")[0]; ?></h4>
+               <p><?php echo $xml->xpath("/RoyalSport/category[id ='{$rcid}']/subcategory/product[id ='{$rpid}']/description")[0]; ?></p>
+               <div style= 'float: left;'><button class="btn default btn-details">Add to Cart</button></div>
+               <div style= 'float: right;' class="price"><?php echo "$".$xml->xpath("/RoyalSport/category[id ='{$rcid}']/subcategory/product[id ='{$rpid}']/cost")[0]; ?></div>
+            </div>
          <?php } ?>
-       </div>
      </div>
      <!-- /.row -->
 
