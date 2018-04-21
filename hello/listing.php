@@ -8,6 +8,7 @@
   }
   if(isset($_GET["search"])){
     $search=$_GET["search"];
+    $product = $xml->xpath("/RoyalSport/category/subcategory/product[contains(description,'{$search}')]");
   }
 ?>
 
@@ -64,9 +65,12 @@
           <?php if(isset($categoryId) && isset($pathId)){ ?>
             <h1 class="my-4"><?php echo $xml->xpath("/RoyalSport/category[id=$categoryId]/subcategory[id=$pathId]/name")[0]; ?></h1>
           <?php }
-          else{ ?>
+          else if(count($product) >= 1){ ?>
             <h1 class="my-4"><?php echo $search; ?></h1>
-          <?php } ?>
+          <?php }
+          else {
+             header("Location: 404.html");
+          } ?>
 
 
         </div>
@@ -74,8 +78,7 @@
 
           <div class="row">
             <?php
-              if(isset($search)){
-                $product = $xml->xpath("/RoyalSport/category/subcategory/product[contains(description,'{$search}')]");
+              if(isset($search) && count($product) >= 1){
                 $cid = $xml->xpath("/RoyalSport/category/subcategory/product[contains(description,'{$search}')]/parent::*/parent::*/id")[0];
                 $pid = $xml->xpath("/RoyalSport/category/subcategory/product[contains(description,'{$search}')]/id")[0];
                 if(count($product) <= 1)header("Location: detailsPage.php?categoryId=".$cid."&productId=".$pid);
@@ -97,7 +100,7 @@
                   </figure>
                 <?php }
               }
-              else{
+              else if(isset($categoryId) && isset($pathId)){
                 foreach ($xml->xpath("/RoyalSport/category[id=$categoryId]/subcategory[id=$pathId]/product") as $value){ ?>
                   <figure class="snip1268">
                     <div class="image">
