@@ -39,7 +39,7 @@
           <a class="nav-link" href="about.html">About</a>
         </li>
         <li class="nav-item">
-          <a href="shopping-cart.html"
+          <a href="shoppingcart.php"
             class="Library" id="Library" >
           </a>
         </li>
