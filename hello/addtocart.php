@@ -15,6 +15,7 @@ array_push($_SESSION["cartitemspid"], $pId);
 
  ?>
 
- <p> Products successfully added to cart
+ <!-- <p> Products successfully added to cart
    <a href="shoppingcart.php">View shoppingcart</a>
- </p>
+ </p> -->
+  <meta http-equiv="refresh" content="0; url=shoppingcart.php" />
