@@ -26,12 +26,13 @@ include 'xmlLoader.php';
 
       $name = $xml->xpath("/RoyalSport/category[id=$cid]/subcategory/product[id = $pid]/name")[0];
       $price = $xml->xpath("/RoyalSport/category[id=$cid]/subcategory/product[id = $pid]/cost")[0];
+
       //$image = $xml->xpath("/RoyalSport/category[id=$cid]/subcategory/product[id = $pid]/image")[0];
 
       $total += $price;
 
       echo "<br>" . $name . "  €" . $price . "<br>"; ?> <a href="deleteitems.php?item=<?php echo $i; ?>">Delete Item</a> <?php
-
+      
     }
     echo "<br>The total is: €" . $total;
   }
