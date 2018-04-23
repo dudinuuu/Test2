@@ -1,7 +1,7 @@
 <?php
 include 'xmlLoader.php';
-  session_start();
-  ?>
+session_start();
+?>
 
   <!DOCTYPE html>
   <html lang="en">
@@ -48,23 +48,22 @@ include 'xmlLoader.php';
     <!-- Page Content -->
     <div class="container">
 
-<?php
-
+  <?php
   //$_SESSION["id2"] = $pdid;
   if(empty($_SESSION["cartitemscid"]) || empty($_SESSION["cartitemspid"])){
-    ?>  <div class="container">
-      <div class="cart">
-        <img class="noItems" src="https://i.pinimg.com/originals/bf/20/7e/bf207ee3a161fcf6ef833911aa73c072.png" width="30px" >
-        <p>Your cart is empty</p>
-      </div>
+  ?>
+  <div class="container">
+    <div class="cart">
+      <img class="noItems" src="https://i.pinimg.com/originals/bf/20/7e/bf207ee3a161fcf6ef833911aa73c072.png" width="30px" >
+      <p>Your cart is empty</p>
     </div>
-               <?php
-  }
-  else{
+  </div>
+  <?php
+  } else{
 
-    $total = 0.00;
+      $total = 0.00;
 
-    for ($i=0; $i < count($_SESSION["cartitemscid"]); $i++) {
+      for ($i=0; $i < count($_SESSION["cartitemscid"]); $i++) {
       echo "<br>" . $_SESSION["cartitemscid"][$i] . "  " . $_SESSION["cartitemspid"][$i];
 
       $cid = $_SESSION["cartitemscid"][$i];
@@ -79,12 +78,12 @@ include 'xmlLoader.php';
       echo "<br>";
       ?>
       <input type="number" id="qty" oninput="formChanged()"/>
-      <ouput id="result" />
+      <p id="result" ></p>
 
       <script>
       function formChanged(){
         var x = document.getElementById("qty").value;
-        result.innerHTML = x;
+        document.getElementById("result").innerHTML = x;
       }
       </script>
 
@@ -92,10 +91,10 @@ include 'xmlLoader.php';
       echo "<br>" . $name . "  €" . $price  . "<br>"; ?> <a href="deleteitems.php?item=<?php echo $i; ?>">Delete Item</a> <?php
 
     }
-    echo "<br>The total is: €" . $total;
+  echo "<br>The total is: €" . $total;
   }
 
-echo "<br><br><br><br>"
+  echo "<br><br><br><br>"
 
 
   // echo $_SESSION["id1"] . ".<br>";
@@ -114,14 +113,14 @@ echo "<br><br><br><br>"
   ?>
 
 
-<div>
-  <p> New shopping cart (Later on will be chechout)
-    <a href="deletesession.php" >new shopping cart</a>
-  </p>
-  <p>Continue shopping
-    <a href="index.html">Continue shopping</a>
-  </p>
-</div>
+  <div>
+    <p> New shopping cart (Later on will be chechout)
+      <a href="deletesession.php" >new shopping cart</a>
+    </p>
+    <p>Continue shopping
+      <a href="index.html">Continue shopping</a>
+    </p>
+  </div>
 </div>
   <!-- Footer -->
   <footer class="py-5 bg-dark">
