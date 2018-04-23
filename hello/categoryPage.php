@@ -97,9 +97,11 @@ session_start();
             <!-- Creating a figure for each product using foreach -->
             <?php foreach ($xml->xpath("/RoyalSport/category[id=$categoryId]/subcategory/product") as $value){ ?>
               <figure class="snip1268">
-                <div class="image">
-                  <img src="<?php echo $value->image; ?>" alt="sq-sample4"/>
-                  <a href="detailsPage.php?categoryId=<?php echo $categoryId; ?>&productId=<?php echo $value->id; ?>" class="add-to-cart">Details</a>
+                <div class="imageContainer">
+                  <div class="image">
+                    <img src="<?php echo $value->image; ?>" alt="sq-sample4"/>
+                    <a href="detailsPage.php?categoryId=<?php echo $categoryId; ?>&productId=<?php echo $value->id; ?>" class="add-to-cart">Details</a>
+                  </div>
                 </div>
                 <figcaption>
                   <h2><?php echo $value->name; ?></h2>

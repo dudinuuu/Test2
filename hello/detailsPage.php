@@ -64,8 +64,14 @@
          <p> <?php echo '$'.$xml->xpath("/RoyalSport/category[id = '{$categoryId}']/subcategory/product[id = '{$productId}']/cost")[0];?> </p>
          <h3 class="my-3">Description</h3>
          <p> <?php echo $xml->xpath("/RoyalSport/category[id = '{$categoryId}']/subcategory/product[id = '{$productId}']/description")[0];?> </p>
+
+
+
          <div class="button">
            <form method="get" action="checkout.php">
+             <h3 class="my-3">Quantity</h3>
+             <input type="number" name="qty" style="width: 60px;" value="1"></input>
+             <br></br>
              <input href="checkout.php" type="submit" value="Add to cart" class="btn btn-details" ></input>
            </form>
          </div>

@@ -6,6 +6,17 @@
     display: inline-block;
 }
 
+.imageContainer{
+  height: 310px;
+}
+
+.image{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+}
+
 /* On mouse-over */
 .btn:hover {background: #FF7700;}
 
