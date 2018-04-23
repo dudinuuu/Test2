@@ -67,14 +67,7 @@
 
 
 
-         <div class="button">
-           <form method="get" action="checkout.php">
-             <h3 class="my-3">Quantity</h3>
-             <input type="number" name="qty" style="width: 60px;" value="1"></input>
-             <br></br>
-             <input href="checkout.php" type="submit" value="Add to cart" class="btn btn-details" ></input>
-           </form>
-         </div>
+         <div><a style="float: left" class="btn default" href="addtocart.php?categoryId=<?php echo $categoryId; ?>&productId=<?php echo $productId; ?>" class="add-to-cart">Add to Cart</a>
 
        </div>
 
