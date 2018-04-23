@@ -6,7 +6,7 @@
     display: inline-block;
 }
 
-.imageContainer{
+ .imageContainer{
   height: 310px;
 }
 
@@ -14,8 +14,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-}
+} 
+
 
 /* On mouse-over */
 .btn:hover {background: #FF7700;}

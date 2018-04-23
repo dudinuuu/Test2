@@ -109,23 +109,7 @@ session_start();
                   <div style= 'float: right;'>
                   <div class="price"><?php echo "$$value->cost"; ?></div>
                   </div>
-                  <!-- <div style= 'float: left;'><button onclick="shoppingcart.php" class="btn default">Add to Cart </button></div> -->
-
-                  <!-- <div style= 'float: left;' class="btn default"> -->
-                  <!-- <form style= 'float: left;' class="btn default" action="shoppingcart.php?catagoryIF">
-                    <input type="submit" value="Add to Cart" />
-                  </form> -->
                   <div><a style="float: left" class="btn default" href="addtocart.php?categoryId=<?php echo $categoryId; ?>&productId=<?php echo $value->id; ?>" class="add-to-cart">Add to Cart</a>
-                    <?php
-                    // $xml->xpath("/RoyalSport/category[id=$categoryId]/subcategory/product/id")[]
-                    // $pdid = $value->id;
-                    // $_SESSION["cartitems"] = array();
-                    // array_push($_SESSION["cartitems"], $categoryId);
-                    // echo $pdid;
-                    // array_push($_SESSION["cartitems"], $pdid);
-                    //$_SESSION["id1"]=$categoryId;
-
-                    ?>
                   </div>
                 <!-- </div> -->
                 </figcaption>

@@ -85,9 +85,11 @@
 
                 foreach ($product as $value){ ?>
                   <figure class="snip1268">
-                    <div class="image">
-                      <img src="<?php echo $value->image; ?>" alt="sq-sample4"/>
-                      <a href="detailsPage.php?categoryId=<?php echo $cid; ?>&productId=<?php echo $pid; ?>" class="add-to-cart">Details</a>
+                    <div class="imageContainer">
+                      <div class="image">
+                        <img src="<?php echo $value->image; ?>" alt="sq-sample4"/>
+                        <a href="detailsPage.php?categoryId=<?php echo $cid; ?>&productId=<?php echo $pid; ?>" class="add-to-cart">Details</a>
+                      </div>
                     </div>
                     <figcaption>
                       <h2><?php echo $value->name; ?></h2>
@@ -103,9 +105,11 @@
               else if(isset($categoryId) && isset($pathId)){
                 foreach ($xml->xpath("/RoyalSport/category[id=$categoryId]/subcategory[id=$pathId]/product") as $value){ ?>
                   <figure class="snip1268">
-                    <div class="image">
-                      <img src="<?php echo $value->image; ?>" alt="sq-sample4"/>
-                      <a href="detailsPage.php?categoryId=<?php echo $cid; ?>&productId=<?php echo $pid; ?>" class="add-to-cart">Details</a>
+                    <div class="imageContainer">
+                      <div class="image">
+                        <img src="<?php echo $value->image; ?>" alt="sq-sample4"/>
+                        <a href="detailsPage.php?categoryId=<?php echo $cid; ?>&productId=<?php echo $pid; ?>" class="add-to-cart">Details</a>
+                      </div>
                     </div>
                     <figcaption>
                       <h2><?php echo $value->name; ?></h2>
