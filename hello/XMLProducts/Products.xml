@@ -85,15 +85,46 @@
     </subcategory>
   </category>
 
-  <!-- <category>
+  <category>
     <id>3</id>
     <name>Boxing</name>
+    <carouselImage>http://www.anfiteatrum.es/wp-content/uploads/2015/01/slide30-900x350.png</carouselImage>
+    <carouselImage>https://i.pinimg.com/originals/e3/16/11/e316115ccdf4763e383aa5baacc38d76.jpg</carouselImage>
+    <carouselImage>https://i.pinimg.com/originals/f6/62/8c/f6628c5b7c763ff794d81e6b584e0a4e.jpg</carouselImage>
+    <subcategory>
+      <name>Boxing Gloves</name>
+      <id>1</id>
     <product>
         <id>1</id>
-        <name>puma</name>
-        <cost>50</cost>
-        <description>VeryGood puma gloves</description>
+        <name>Adidas Boxing Gloves</name>
+        <cost>29.99</cost>
+        <description>Very Good Adidas gloves</description>
+        <image>https://mmafightstore.com.au/mma/wp-content/uploads/2015/02/adidas-ultima-boxing-gloves-pair-red.jpg</image>
     </product>
-  </category> -->
+  </subcategory>
+  <subcategory>
+    <name>Boxing Shorts</name>
+    <id>2</id>
+  <product>
+    <id>2</id>
+    <name>Everlast Boxing Shorts</name>
+    <cost>24.99</cost>
+    <description>Very good Everlast Boxing Shorts</description>
+    <image>https://i.pinimg.com/originals/9c/b8/44/9cb84441ffc1aa651acaa3b6a10b3aa5.jpg</image>
+  </product>
+</subcategory>
+<subcategory>
+  <name>Boxing Mouth Guards</name>
+  <id>3</id>
+<product>
+  <id>3</id>
+  <name>Venom Boxing Mouth Guards</name>
+  <cost>14.99</cost>
+  <description>Very good Venom Boxing Mouth Guards</description>
+  <image>https://s-media-cache-ak0.pinimg.com/originals/cf/ba/87/cfba8775d11b51ac257ab6092593b7c1.jpg</image>
+</product>
+</subcategory>
+
+  </category>
 
 </RoyalSport>
