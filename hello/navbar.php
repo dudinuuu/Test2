@@ -14,13 +14,11 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li>
-            <div class="header">
-              <div class="search_bar">
-                <form action="listing.php" method="get">
-                  <input type="text" name="search" placeholder="Search Website..">
-                </form>
-              </div>
-            </div>
+          <div class="search_bar">
+            <form action="listing.php" method="get">
+              <input type="text" name="search" placeholder="Search Website..">
+            </form>
+          </div>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

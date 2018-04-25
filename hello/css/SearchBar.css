@@ -10,10 +10,9 @@ html, body {
     background-color:#343430;
 }
 .search_bar input[type="text"] {
-    position:absolute;
-    left:30%;
-    top:25%;
-    width:30%;
+    width:80%;
+    margin-top: 0.5rem;
+    margin-right: 350px;
     background-color:white;
     color:grey;
     background-image: url('searchicon.png');
