@@ -1,5 +1,7 @@
 <?php
   session_start();
 
-  $_SESSION["cart"] = $_POST["postname"];
+  if(!isset($_SESSION["cart"])){
+    $_SESSION["cart"] = array();
+  }
  ?>

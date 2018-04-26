@@ -1,5 +1,8 @@
 <?php
 session_start();
+if(!isset($_SESSION["cart"])){
+    $_SESSION["cart"] = array();
+  }
   $categoryId=$_GET["categoryId"];
   $productId=$_GET["productId"];
   $xml = simplexml_load_file('./XMLProducts/Products.xml');
@@ -141,6 +144,7 @@ session_start();
    <script src="vendor/jquery/jquery.min.js"></script>
    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+   <script src="js/jQuery.js"></script>
    <script src="cart.js"></script>
    <script>
    function addThisToCart(){
