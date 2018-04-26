@@ -67,10 +67,8 @@
 
 
 
-         <div><a style="float: left" class="btn default" href="addtocart.php?categoryId=<?php echo $categoryId; ?>&productId=<?php echo $productId; ?>" class="add-to-cart">Add to Cart</a>
-
+         <div><a style="float: left" class="btn default" href="addtocart.php?categoryId=<?php echo $categoryId; ?>&productId=<?php echo $productId; ?>" class="add-to-cart">Add to Cart</a></div>
        </div>
-
      </div>
      <!-- /.row -->
 
@@ -80,9 +78,28 @@
      <div class="row">
 
        <?php
+          $array = array();
           for($count = 0; $count<4 ; $count++){
-          $rcid = rand(1,count($xml->xpath("/RoyalSport/category/id"))); //pick a random category
-          $rpid =rand(1,count($xml->xpath("/RoyalSport/category[id ='{$rcid}']/subcategory/product"))); //pick a random product
+            $rpid =rand(1,count($xml->xpath("/RoyalSport/category/subcategory/product"))); //pick a random product
+            $array[$count]=$rpid;
+
+            //Featured items to be unique using flags
+            $flag=false;
+            for($i=1; $i<count($array); $i++){
+              if($array[$i-1]==$rpid){
+                $flag=true;
+                break;
+              }
+              else{
+                $flag=false;
+              }
+            }
+            if($rpid==$productId){ //check if any featured product is the same as the product shown
+              $flag=true;
+            }
+
+            $rcid =$xml->xpath("/RoyalSport/category/subcategory/product[id=$rpid]/parent::*/parent::*/id")[0];
+            if($flag==false){
          ?>
             <div class="col-md-3 col-sm-6 mb-4">
                <a href="detailsPage.php?categoryId=<?php echo $rcid; ?>&productId=<?php echo $rpid; ?>">
@@ -93,7 +110,12 @@
                <div style= 'float: left;'><button class="btn default btn-details">Add to Cart</button></div>
                <div style= 'float: right;' class="price"><?php echo "$".$xml->xpath("/RoyalSport/category[id ='{$rcid}']/subcategory/product[id ='{$rpid}']/cost")[0]; ?></div>
             </div>
-         <?php } ?>
+         <?php }
+           else{
+             $count--;
+             $flag=false;
+           }
+         } ?>
      </div>
      <!-- /.row -->
 
@@ -114,11 +136,5 @@
    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
  </body>
-
- <script src="cart.js"></script>
- <script>
- 
- </script>
-
 
 </html>
