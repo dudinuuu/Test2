@@ -54,7 +54,7 @@
       <name>boots</name>
       <id>1</id>
       <product>
-          <id>1</id>
+          <id>4</id>
           <name>nike kyrie 4</name>
           <cost>77.97</cost>
           <description>Mhux worth it nike shoes</description>
@@ -65,7 +65,7 @@
       <name>gear</name>
       <id>2</id>
       <product>
-          <id>2</id>
+          <id>5</id>
           <name>Celtics Fanatics shirt</name>
           <cost>29.99</cost>
           <description>Mhux worth it basketball celtics shirt</description>
@@ -76,7 +76,7 @@
       <name>Balls</name>
       <id>3</id>
       <product>
-          <id>3</id>
+          <id>6</id>
           <name>Nike Basketball</name>
           <cost>11.99</cost>
           <description>mhux worth it bouncy nike ball</description>
@@ -95,7 +95,7 @@
       <name>Boxing Gloves</name>
       <id>1</id>
     <product>
-        <id>1</id>
+        <id>7</id>
         <name>Adidas Boxing Gloves</name>
         <cost>29.99</cost>
         <description>Very Good Adidas gloves</description>
@@ -106,7 +106,7 @@
     <name>Boxing Shorts</name>
     <id>2</id>
   <product>
-    <id>2</id>
+    <id>8</id>
     <name>Everlast Boxing Shorts</name>
     <cost>24.99</cost>
     <description>Very good Everlast Boxing Shorts</description>
@@ -117,7 +117,7 @@
   <name>Boxing Mouth Guards</name>
   <id>3</id>
 <product>
-  <id>3</id>
+  <id>9</id>
   <name>Venom Boxing Mouth Guards</name>
   <cost>14.99</cost>
   <description>Very good Venom Boxing Mouth Guards</description>
