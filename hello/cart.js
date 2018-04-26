@@ -74,7 +74,13 @@ function totalCostCart(){
   return total;
 }
 
+function saveArray(){
+  $.post("saveSessionCart.php", {postname:cart.slice()},
+  function(data){
+    $("#result").html(data);
 
+  });
+}
 
 
 function post(){

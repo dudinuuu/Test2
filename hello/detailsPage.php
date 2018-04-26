@@ -52,6 +52,11 @@
       ?>
      </h1>
 
+     <?php
+      $name = $xml->xpath("/RoyalSport/category[id = '{$categoryId}']/subcategory/product[id = '{$productId}']/name")[0];
+      $price = $xml->xpath("/RoyalSport/category[id = '{$categoryId}']/subcategory/product[id = '{$productId}']/cost")[0];
+      ?>
+
      <!-- Portfolio Item Row -->
      <div class="row">
 
@@ -67,7 +72,7 @@
 
 
 
-         <div><a style="float: left" class="btn default" href="addtocart.php?categoryId=<?php echo $categoryId; ?>&productId=<?php echo $productId; ?>" class="add-to-cart">Add to Cart</a></div>
+         <div><input type="button" value="Add to Cart" style="float: left" class="btn default" onclick="addThisToCart();" class="add-to-cart"></input></div>
        </div>
      </div>
      <!-- /.row -->
@@ -134,6 +139,22 @@
    <!-- Bootstrap core JavaScript -->
    <script src="vendor/jquery/jquery.min.js"></script>
    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+   <script src="cart.js"></script>
+   <script>
+   function addThisToCart(){
+    console.log("hello");
+    var id = <?php echo json_encode($productId); ?>;
+    var name = <?php echo json_encode($name); ?>;
+    var price = <?php echo json_encode($price); ?>;
+
+    addcart(id, name, price, 1);
+
+    post();
+
+    console.log(id);
+  }
+  </script>
 
  </body>
 
