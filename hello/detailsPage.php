@@ -1,4 +1,5 @@
 <?php
+session_start();
   $categoryId=$_GET["categoryId"];
   $productId=$_GET["productId"];
   $xml = simplexml_load_file('./XMLProducts/Products.xml');
@@ -147,6 +148,8 @@
     var id = <?php echo json_encode($productId); ?>;
     var name = <?php echo json_encode($name); ?>;
     var price = <?php echo json_encode($price); ?>;
+
+    cart = <?php echo json_encode($_SESSION["cart"]); ?>;
 
     addcart(id, name, price, 1);
 
