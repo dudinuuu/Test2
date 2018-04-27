@@ -22,7 +22,8 @@ print_r($_SESSION["cart"]);
     <script>
 
       cart = <?php echo json_encode($_SESSION["cart"]); ?>;
-      addOneItem(3);
+      
+
 
       console.log(cart);
     </script>

@@ -2,6 +2,9 @@
   include 'xmlLoader.php';
   session_start();
   $categoryId=$_GET["categoryId"];
+  if(!isset($_SESSION["cart"])){
+    $_SESSION["cart"] = array();
+  }
 ?>
 
 <!DOCTYPE html>
@@ -110,8 +113,10 @@
                 <div style= 'float: right;'>
                 <div class="price"><?php echo "$$value->cost"; ?></div>
                 </div>
-                <div><a style="float: left" class="btn default" href="addtocart.php?categoryId=<?php echo $categoryId; ?>&productId=<?php echo $value->id; ?>" class="add-to-cart">Add to Cart</a>
-                </div>
+                <div style="float: left" > <?php
+                     echo "<button onclick='addThisToCartP(".'"'.$value->id.'","'.$value->name.'","'.$value->cost.'"'.")' type='button'>Add to Cart</button>";
+                     ?>
+                    </div>
               <!-- </div> -->
               </figcaption>
             </figure>
@@ -138,10 +143,23 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Contact form JavaScript -->
-    <!-- Do not edit these files! In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
+
+    <script src="js/jQuery.js"></script>
+    <script src="cart.js"></script>
+    <script>
+    function addThisToCartP(ide, name, price){
+     console.log("hello");
+
+     cart = <?php echo json_encode($_SESSION["cart"]); ?>;
+
+     addcart(ide , name, price, 1);
+
+     post();
+
+     console.log(ide);
+   }
+   </script>
+
 
   </body>
 
