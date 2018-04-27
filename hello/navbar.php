@@ -4,7 +4,7 @@
 
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container">
-    <img class="logo" src="https://i.pinimg.com/originals/4c/b0/d6/4cb0d6c95b0102b83cb9f4d5d847424e.png" width="30px" >
+    <a href="index.html"><img class="logo"  src="https://i.pinimg.com/originals/4c/b0/d6/4cb0d6c95b0102b83cb9f4d5d847424e.png" width="30px"></a>
     <link rel="icon" href="https://cdn3.iconfinder.com/data/icons/sport-games-1/512/royal-king-queen-luxury-crown-512.png">
     <link rel="stylesheet" type="text/css" href="css/SearchBar.css">
     <a class="navbar-brand" href="index.html">Royal Sports</a>
