@@ -22,7 +22,7 @@ print_r($_SESSION["cart"]);
     <script>
 
       cart = <?php echo json_encode($_SESSION["cart"]); ?>;
-      
+      console.log(totalCostCart());
 
 
       console.log(cart);
