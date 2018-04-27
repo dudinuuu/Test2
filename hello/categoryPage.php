@@ -113,10 +113,8 @@
                 <div style= 'float: right;'>
                 <div class="price"><?php echo "$$value->cost"; ?></div>
                 </div>
-                <div style="float: left" > <?php
-                     echo "<button onclick='addThisToCartP(".'"'.$value->id.'","'.$value->name.'","'.$value->cost.'"'.")' type='button'>Add to Cart</button>";
-                     ?>
-                    </div>
+                <div> <?php echo "<button style='float: left' onclick='addThisToCartP(".'"'.$value->id.'","'.$value->name.'","'.$value->cost.'"'.")' type='button' class='btn default'>Add to Cart</button>"; ?>
+                </div>
               <!-- </div> -->
               </figcaption>
             </figure>
