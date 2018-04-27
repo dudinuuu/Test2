@@ -1,8 +1,7 @@
 <?php
-include 'xmlLoader.php';
-session_start();
+  include 'xmlLoader.php';
+  session_start();
   $categoryId=$_GET["categoryId"];
-
 ?>
 
 <!DOCTYPE html>
@@ -22,14 +21,14 @@ session_start();
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Our own css file -->
-  <link href="css/MyCss.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/shop-homepage.css" rel="stylesheet">
 
   <!--image buttons css-->
   <link rel="stylesheet" type="text/css" href="css/snip1268.css">
 
-  <!-- Custom styles for this template -->
-  <link href="css/shop-homepage.css" rel="stylesheet">
+  <!-- Our own css file -->
+  <link href="css/MyCss.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
   <link href="css/categoryPage.css" rel="stylesheet">
@@ -91,36 +90,35 @@ session_start();
               <span class="sr-only">Next</span>
             </a>
           </div>
-
-          <div class="row">
-
-            <!-- Creating a figure for each product using foreach -->
-            <?php foreach ($xml->xpath("/RoyalSport/category[id=$categoryId]/subcategory/product") as $value){ ?>
-              <figure class="snip1268">
-                <div class="imageContainer">
-                  <div class="image">
-                    <img src="<?php echo $value->image; ?>" alt="sq-sample4"/>
-                    <a href="detailsPage.php?categoryId=<?php echo $categoryId; ?>&productId=<?php echo $value->id; ?>" class="add-to-cart">Details</a>
-                  </div>
-                </div>
-                <figcaption>
-                  <h2><?php echo $value->name; ?></h2>
-                  <p><?php echo $value->description; ?></p>
-                  <div style= 'float: right;'>
-                  <div class="price"><?php echo "$$value->cost"; ?></div>
-                  </div>
-                  <div><a style="float: left" class="btn default" href="addtocart.php?categoryId=<?php echo $categoryId; ?>&productId=<?php echo $value->id; ?>" class="add-to-cart">Add to Cart</a>
-                  </div>
-                <!-- </div> -->
-                </figcaption>
-              </figure>
-            <?php } ?>
-
-          </div>
-          <!-- /.row -->
-
         </div>
         <!-- /.col-lg-9 -->
+
+        <div class="row">
+
+          <!-- Creating a figure for each product using foreach -->
+          <?php foreach ($xml->xpath("/RoyalSport/category[id=$categoryId]/subcategory/product") as $value){ ?>
+            <figure class="snip1268">
+              <div class="imageContainer">
+                <div class="image">
+                  <img src="<?php echo $value->image; ?>" alt="sq-sample4"/>
+                  <a href="detailsPage.php?categoryId=<?php echo $categoryId; ?>&productId=<?php echo $value->id; ?>" class="add-to-cart">Details</a>
+                </div>
+              </div>
+              <figcaption>
+                <h2><?php echo $value->name; ?></h2>
+                <p><?php echo $value->description; ?></p>
+                <div style= 'float: right;'>
+                <div class="price"><?php echo "$$value->cost"; ?></div>
+                </div>
+                <div><a style="float: left" class="btn default" href="addtocart.php?categoryId=<?php echo $categoryId; ?>&productId=<?php echo $value->id; ?>" class="add-to-cart">Add to Cart</a>
+                </div>
+              <!-- </div> -->
+              </figcaption>
+            </figure>
+          <?php } ?>
+
+        </div>
+        <!-- /.row -->
 
       </div>
       <!-- /.row -->

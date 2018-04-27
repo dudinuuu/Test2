@@ -1,16 +1,11 @@
 .btn-details {
     border: none;
     display: inline-block;
+    background-color: buttonface;
 }
 
 /* On mouse-over */
 .btn-details:hover {background: #FF7700;}
-
-.success {color: green;}
-.info {color: dodgerblue;}
-.warning {color: orange;}
-.danger {color: red;}
-.default {color: black;}
 
 .price {
   font-size: 1.3em;

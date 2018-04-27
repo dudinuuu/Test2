@@ -23,11 +23,11 @@ if(!isset($_SESSION["cart"])){
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Our own css file -->
-  <link href="css/MyCss.css" rel="stylesheet">
-
   <!-- Custom styles for this template -->
   <link href="css/modern-business.css" rel="stylesheet">
+
+  <!-- Our own css file -->
+  <link href="css/MyCss.css" rel="stylesheet">
 
   <!-- navigation bar loader -->
   <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -76,7 +76,7 @@ if(!isset($_SESSION["cart"])){
 
 
 
-         <div><input type="button" value="Add to Cart" style="float: left" class="btn default" onclick="addThisToCart();" class="add-to-cart"></input></div>
+         <div><input type="button" value="Add to Cart" style="float: left" class="btn btn-details default" onclick="addThisToCart();" class="add-to-cart"></input></div>
        </div>
      </div>
      <!-- /.row -->
