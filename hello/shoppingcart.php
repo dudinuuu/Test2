@@ -1,15 +1,26 @@
 <?php
 session_start();
-print_r($_SESSION["cart"]);
  ?>
 
   <!DOCTYPE html>
   <html lang="en">
-  <style>
-table, th, td {
-    border: 1px solid black;
-}
-</style>
+
+    <style>
+      table, th, td {
+          border: 1px solid black;
+      }
+      .button {
+        display: block;
+        width: 115px;
+        height: 25px;
+        background: black;
+        padding: 10px;
+        text-align: center;
+        border-radius: 5px;
+        color: white;
+        font-weight: bold;
+      }
+    </style>
 
   <body>
     <h1> Shopping cart</h1>
@@ -18,14 +29,11 @@ table, th, td {
       <table id="show-cart">
         <!-- -->
       </table>
-      <div  >Total Cart: €<span id="total-cart"></span></div>
+      <div><font size="6">Total Cart: €<span id="total-cart"></span></font></div>
     </div>
 
-    <form>
-      <input type="button" value="save cart" onclick="post();">
-    </form>
 
-    <a href="deletesession.php">Delete session array</a>
+    <a class="button" href="deletesession.php">Delete cart</a>
 
     <div id="result"></div>
 
@@ -34,11 +42,6 @@ table, th, td {
     <script>
 
       cart = <?php echo json_encode($_SESSION["cart"]); ?>;
-      console.log(totalCostCart());
-
-      console.log(listCart());
-
-      console.log(cart);
 
       function displayCart(){
         var cartArray = listCart();
