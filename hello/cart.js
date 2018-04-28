@@ -1,5 +1,5 @@
 
-var cart = [];
+//var cart = [];
 
 
 var Item = function(id, name, price, quantity){
@@ -12,7 +12,7 @@ var Item = function(id, name, price, quantity){
 function addcart(id, name, price, quantity){
   for(var i in cart){
     if (cart[i].id == id){//checks for the same item to increment its quantity
-      cart[i].quantity += quantity;
+      cart[i].quantity++;
       return;
     }
   }

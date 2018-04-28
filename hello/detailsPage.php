@@ -109,6 +109,7 @@ if(!isset($_SESSION["cart"])){
 
             $rcid =$xml->xpath("/RoyalSport/category/subcategory/product[id=$rpid]/parent::*/parent::*/id")[0];
             if($flag==false){
+              foreach ($xml->xpath("/RoyalSport/category[id ='{$rcid}']/subcategory/product[id ='{$rpid}']") as $value){
          ?>
             <div class="col-md-3 col-sm-6 mb-4">
                <a href="detailsPage.php?categoryId=<?php echo $rcid; ?>&productId=<?php echo $rpid; ?>">
@@ -117,11 +118,9 @@ if(!isset($_SESSION["cart"])){
 
                <h4><?php echo $xml->xpath("/RoyalSport/category[id ='{$rcid}']/subcategory/product[id ='{$rpid}']/name")[0]; ?></h4>
                <p><?php echo $xml->xpath("/RoyalSport/category[id ='{$rcid}']/subcategory/product[id ='{$rpid}']/description")[0]; ?></p>
-               <div> <?php echo "<button style='float: left' onclick='addThisToCartP(".'"'.$xml->xpath("/RoyalSport/category[id ='{$rcid}']/subcategory/product[id ='{$rpid}']/id")[0].'","'.$xml->xpath("/RoyalSport/category[id ='{$rcid}']/subcategory/product[id ='{$rpid}']/name")[0].'","'.$xml->xpath("/RoyalSport/category[id ='{$rcid}']/subcategory/product[id ='{$rpid}']/cost")[0].'"'.")' type='button' class='btn default'>Add to Cart</button>"; ?>
-               </div>
-               <div style= 'float: right;' class="price"><?php echo "$".$xml->xpath("/RoyalSport/category[id ='{$rcid}']/subcategory/product[id ='{$rpid}']/cost")[0]; ?></div>
+               <div style= 'float: left;' class="price"><?php echo "$".$xml->xpath("/RoyalSport/category[id ='{$rcid}']/subcategory/product[id ='{$rpid}']/cost")[0]; ?></div>
             </div>
-         <?php }
+         <?php } }
            else{
              $count--;
              $flag=false;
@@ -151,30 +150,21 @@ if(!isset($_SESSION["cart"])){
    <script>
    function addThisToCart(){
     console.log("hello");
-    var id = <?php echo json_encode($productId); ?>;
-    var name = <?php echo json_encode($name); ?>;
-    var price = <?php echo json_encode($price); ?>;
+    var id = "<?php echo ($productId) ?>";
+    var name = "<?php echo ($name); ?>";
+    var price = "<?php echo ($price); ?>";
+    var quantity = 1;
 
     cart = <?php echo json_encode($_SESSION["cart"]); ?>;
 
-    addcart(id, name, price, 1);
+    addcart(id, name, price, quantity);
 
     post();
 
     console.log(id);
+    location.reload();
   }
 
-  function addThisToCartP(ide, name, price){
-   console.log("hello");
-
-   cart = <?php echo json_encode($_SESSION["cart"]); ?>;
-
-   addcart(ide , name, price, 1);
-
-   post();
-
-   console.log(ide);
- }
   </script>
 
  </body>

@@ -150,11 +150,14 @@
 
      cart = <?php echo json_encode($_SESSION["cart"]); ?>;
 
-     addcart(ide , name, price, 1);
+     var quantity = 1;
+
+     addcart(ide, name, price, quantity);
 
      post();
 
      console.log(ide);
+     location.reload();
    }
    </script>
 
