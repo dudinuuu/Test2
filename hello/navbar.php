@@ -1,5 +1,6 @@
 <?php
   include 'xmlLoader.php';
+  session_start();
  ?>
 
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -41,8 +42,18 @@
             class="Library" id="Library" >
           </a>
         </li>
+        <li style="font-size: 1em; color: gray; padding-top: 8px;">
+          <a>(<span id="items-cart">0</span>)</a>
+        </li>
 
       </ul>
-    </div>
+    </div
   </div>
 </nav>
+
+    <script src="js/jQuery.js"></script>
+    <script src="cart.js"></script>
+    <script>
+      cart = <?php echo json_encode($_SESSION["cart"]); ?>;
+      $("#items-cart").html(totalQuantityCart());
+    </script>

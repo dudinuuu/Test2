@@ -5,6 +5,9 @@ session_start();
   <!DOCTYPE html>
   <html lang="en">
 
+  <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+
     <style>
       table, th, td {
           border: 1px solid black;
@@ -26,7 +29,7 @@ session_start();
     <h1> Shopping cart</h1>
 
     <div>
-      <table id="show-cart">
+      <table class="table" id="show-cart">
         <!-- -->
       </table>
       <div><font size="6">Total Cart: €<span id="total-cart"></span></font></div>
@@ -34,7 +37,7 @@ session_start();
 
 
     <a class="button" href="deletesession.php">Delete cart</a>
-
+    <a class="button" href="index.html">Continue shopping</a>
     <div id="result"></div>
 
 <script src="js/jQuery.js"></script>
@@ -45,7 +48,7 @@ session_start();
 
       function displayCart(){
         var cartArray = listCart();
-        var output = "<tr><th>Name</th><th>Quantity</th><th>Price</th><th>-</th><th>+</th><th>Delete</th></tr>";
+        var output = "<tr><th class='text-center'>Name</th><th class='text-center'>Quantity</th><th class='text-center'>Price</th><th>-</th><th>+</th><th>Delete</th></tr>";
         for(var i in cartArray){
           output += "<tr><td>"
           +cartArray[i].name

@@ -54,14 +54,10 @@ function deleteItem(id){
   }
 }
 
-function clearCart(){
-  cart = []; // call this function to delete the cart when the session gets deleted aswell
-}
-
 function totalQuantityCart(){
   var total = 0;
   for(var i in cart){
-    total += cart[i].quantity;
+    total = total + +cart[i].quantity;
   }
   return total;
 }
