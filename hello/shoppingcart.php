@@ -25,6 +25,10 @@ session_start();
       }
     </style>
 
+      <link href="css/MyCss.css" rel="stylesheet">
+      <link href="css/modern-business.css" rel="stylesheet">
+      <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
   <body>
     <h1> Shopping cart</h1>
 
@@ -48,10 +52,11 @@ session_start();
 
       function displayCart(){
         var cartArray = listCart();
-        var output = "<tr><th class='text-center'>Name</th><th class='text-center'>Quantity</th><th class='text-center'>Price</th><th>-</th><th>+</th><th>Delete</th></tr>";
+        var output = "<tr><th class='text-center'>Image</th><th class='text-center'>Name</th><th class='text-center'>Quantity</th><th class='text-center'>Price</th><th>-</th><th>+</th><th>Delete</th></tr>";
         for(var i in cartArray){
           output += "<tr><td>"
-          +cartArray[i].name
+          +"<img class='img-fluid' src='"+cartArray[i].image+"'></image>"
+          +"</td><td>"+cartArray[i].name
           +"</td><td>"+cartArray[i].quantity
           +"</td><td>€"+cartArray[i].price
           +"</td><td><button class='subtract-item' data-id='"+cartArray[i].id+"'>-</button>"
