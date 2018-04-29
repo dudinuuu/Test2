@@ -57,9 +57,10 @@ if(!isset($_SESSION["cart"])){
      </h1>
 
      <?php
-      $image = $xml->xpath("/RoyalSport/category[id = '{$categoryId}']/subcategory/product[id = '{$productId}']/image")[0];
       $name = $xml->xpath("/RoyalSport/category[id = '{$categoryId}']/subcategory/product[id = '{$productId}']/name")[0];
       $price = $xml->xpath("/RoyalSport/category[id = '{$categoryId}']/subcategory/product[id = '{$productId}']/cost")[0];
+      $image = $xml->xpath("/RoyalSport/category[id = '{$categoryId}']/subcategory/product[id = '{$productId}']/image")[0];
+      echo $image;
       ?>
 
      <!-- Portfolio Item Row -->
@@ -152,14 +153,14 @@ if(!isset($_SESSION["cart"])){
    function addThisToCart(){
     console.log("hello");
     var id = "<?php echo ($productId) ?>";
-    var image = "<?php echo ($productId) ?>";
     var name = "<?php echo ($name); ?>";
     var price = "<?php echo ($price); ?>";
     var quantity = 1;
+    var image = "<?php echo ($image); ?>";
 
     cart = <?php echo json_encode($_SESSION["cart"]); ?>;
 
-    addcart(id, image, name, price, quantity);
+    addcart(id, name, price, quantity, image);
 
     post();
 

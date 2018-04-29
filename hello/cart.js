@@ -2,22 +2,22 @@
 var cart = [];
 
 
-var Item = function(id, image, name, price, quantity){
+var Item = function(id, name, price, quantity, image){
   this.id = id//unique ID is needed here for each item.
-  this.image = image
   this.name = name
   this.price = price
   this.quantity = quantity
+  this.image = image
 };
 
-function addcart(id, image, name, price, quantity){
+function addcart(id, name, price, quantity, image){
   for(var i in cart){
     if (cart[i].id == id){//checks for the same item to increment its quantity
       cart[i].quantity++;
       return;
     }
   }
-  var item = new Item(id, image, name, price, quantity);
+  var item = new Item(id, name, price, quantity, image);
   cart.push(item);
 }
 

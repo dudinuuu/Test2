@@ -25,10 +25,6 @@ session_start();
       }
     </style>
 
-      <link href="css/MyCss.css" rel="stylesheet">
-      <link href="css/modern-business.css" rel="stylesheet">
-      <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
   <body>
     <h1> Shopping cart</h1>
 
@@ -55,7 +51,7 @@ session_start();
         var output = "<tr><th class='text-center'>Image</th><th class='text-center'>Name</th><th class='text-center'>Quantity</th><th class='text-center'>Price</th><th>-</th><th>+</th><th>Delete</th></tr>";
         for(var i in cartArray){
           output += "<tr><td>"
-          +"<img class='img-fluid' src='"+cartArray[i].image+"'></image>"
+          +"<img src='"+cartArray[i].image+"' alt='ahdem ostja' border='3' height='100' width='100'></img>"
           +"</td><td>"+cartArray[i].name
           +"</td><td>"+cartArray[i].quantity
           +"</td><td>€"+cartArray[i].price
@@ -63,6 +59,7 @@ session_start();
           +"</td><td><button class='add-item' data-id='"+cartArray[i].id+"'>+</button>"
           +"</td><td><button class='delete-item' data-id='"+cartArray[i].id+"'>X</button></td>"
           +"</tr>"
+
         }
         $("#show-cart").html(output);
         $("#total-cart").html(totalCostCart().toFixed(2));

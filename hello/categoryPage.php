@@ -113,7 +113,7 @@
                 <div style= 'float: right;'>
                 <div class="price"><?php echo "$$value->cost"; ?></div>
                 </div>
-                <div> <?php echo "<button style='float: left' onclick='addThisToCartP(".'"'.$value->id.'","'.$value->name.'","'.$value->cost.'"'.")' type='button' class='btn default'>Add to Cart</button>"; ?>
+                <div> <?php echo "<button style='float: left' onclick='addThisToCartP(".'"'.$value->id.'","'.$value->name.'","'.$value->cost.'","'.$value->image.'"'.")' type='button' class='btn default'>Add to Cart</button>"; ?>
                 </div>
               <!-- </div> -->
               </figcaption>
@@ -145,14 +145,14 @@
     <script src="js/jQuery.js"></script>
     <script src="cart.js"></script>
     <script>
-    function addThisToCartP(ide, name, price){
+    function addThisToCartP(ide, name, price, image){
      console.log("hello");
 
      cart = <?php echo json_encode($_SESSION["cart"]); ?>;
 
      var quantity = 1;
 
-     addcart(ide, name, price, quantity);
+     addcart(ide, name, price, quantity, image);
 
      post();
 
