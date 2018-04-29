@@ -8,36 +8,86 @@ session_start();
   <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
   <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
 
-    <style>
-      table, th, td {
-          border: 1px solid black;
-      }
-      .button {
-        display: block;
-        width: 115px;
-        height: 25px;
-        background: black;
-        padding: 10px;
-        text-align: center;
-        border-radius: 5px;
-        color: white;
-        font-weight: bold;
-      }
-    </style>
+  <style>
+  h1{
+    text-decoration: underline gray;
+    padding-bottom: 5px;
+  }
+
+  table{
+    border-collapse: collapse;
+      width: 100%;
+  }
+
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+  tr:hover {background-color:#f5f5f5;}
+
+  .subtract-item, .add-item, .delete-item{
+    color: white;
+    background-color: gray;
+    border: none;
+    transition-duration: 0.4s;
+  }
+
+  .subtract-item:hover, .add-item:hover, .delete-item:hover{
+    color: white;
+    background-color: orange;
+    border: none;
+    border-radius: 30%;
+  }
+
+  .total-button{
+    position: absolute;
+    right: 100px;
+  }
+
+  .button{
+    color: white;
+    background-color: gray;
+    padding: 5px;
+  }
+
+  .button:hover{
+    color: white;
+    background-color: orange;
+    padding: 5px;
+    text-decoration: none;
+  }
+  img {
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition:         transform .8s ease-in-out;
+}
+img:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+  </style>
+
 
   <body>
-    <h1> Shopping cart</h1>
+    <h1>🛒Shopping cart🛒</h1>
 
     <div>
-      <table class="table" id="show-cart">
+      <table id="show-cart">
         <!-- -->
       </table>
-      <div><font size="6">Total Cart: €<span id="total-cart"></span></font></div>
+      <br>
+      <div class="total-button">
+        <font size="6">Total Cart: €<span id="total-cart"></span></font>
+        <br>
+        <a style="position:absolute; left:73%;" class="button" href="#">Checkout</a>
+      </div>
     </div>
 
-
-    <a class="button" href="deletesession.php">Delete cart</a>
-    <a class="button" href="index.html">Continue shopping</a>
+      <a class="button" href="deletesession.php">Delete cart</a>
+      <a class="button" href="index.html">Continue shopping</a>
     <div id="result"></div>
 
 <script src="js/jQuery.js"></script>
@@ -48,13 +98,13 @@ session_start();
 
       function displayCart(){
         var cartArray = listCart();
-        var output = "<tr><th class='text-center'>Image</th><th class='text-center'>Name</th><th class='text-center'>Quantity</th><th class='text-center'>Price</th><th>-</th><th>+</th><th>Delete</th></tr>";
+        var output = "<tr><th>Image</th><th>Name</th><th>Quantity</th><th>Price</th><th>-</th><th>+</th><th>Delete</th></tr>";
         for(var i in cartArray){
           output += "<tr><td>"
           +"<img src='"+cartArray[i].image+"' alt='ahdem ostja' border='3' height='100' width='100'></img>"
-          +"</td><td>"+cartArray[i].name
-          +"</td><td>"+cartArray[i].quantity
-          +"</td><td>€"+cartArray[i].price
+          +"</td><td style='font-size: 20px;'>"+cartArray[i].name
+          +"</td><td style='font-size: 20px;'>"+cartArray[i].quantity
+          +"</td><td style='font-size: 20px;'>€"+cartArray[i].price
           +"</td><td><button class='subtract-item' data-id='"+cartArray[i].id+"'>-</button>"
           +"</td><td><button class='add-item' data-id='"+cartArray[i].id+"'>+</button>"
           +"</td><td><button class='delete-item' data-id='"+cartArray[i].id+"'>X</button></td>"
