@@ -94,7 +94,7 @@ session_start();
         +"</td><td style='font-size: 20px;'>"+cart[i].name
         +"</td><td style='font-size: 20px;'>"+cart[i].quantity
         +"</td><td style='font-size: 20px;'>€"+cart[i].price
-        +"</td><td><button class='subtract-item' data-id='"+cart[i].id+"'>-</button>"
+        +"</td><td><button class='subtract-item' data-id='"+cart[i].id+"' i-id='"+i+"'>-</button>"
         +"</td><td><button class='add-item' data-id='"+cart[i].id+"'>+</button>"
         +"</td><td><button class='delete-item' data-id='"+cart[i].id+"'>X</button></td>"
         +"</tr>"
@@ -112,23 +112,31 @@ session_start();
       deleteItem(ide);
       displayCart();
       post();
+      if(cart.length == 0){
+        console.log("hello");
+        post();
+        location.reload();
+      }
     });
     $("#show-cart").on("click", ".subtract-item", function(event){
       var ide = $(this).attr("data-id");
-      removeOneItem(ide);
-      displayCart();
-      post();
+      var i = $(this).attr("i-id");
+      if(cart[i].quantity > 1){
+        removeOneItem(ide);
+        displayCart();
+        post();
+      }
     });
     $("#show-cart").on("click", ".add-item", function(event){
       var ide = $(this).attr("data-id");
       addOneItem(ide);
       displayCart();
       post();
+
     });
 
-    if(array.length < 1 || array == undefined){
-      post();
-      location.reload();
-    }
+
+
+
   </script>
 </html>
