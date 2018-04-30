@@ -74,9 +74,8 @@ if(!isset($_SESSION["cart"])){
          <p> <?php echo '$'.$xml->xpath("/RoyalSport/category[id = '{$categoryId}']/subcategory/product[id = '{$productId}']/cost")[0];?> </p>
          <h3 class="my-3">Description</h3>
          <p> <?php echo $xml->xpath("/RoyalSport/category[id = '{$categoryId}']/subcategory/product[id = '{$productId}']/description")[0];?> </p>
-
-
-
+         <h3 class="my-3">Quantity</h3>
+         <input id="quantity" type="number" name="quantity" value="1" min="1" max="100" style="width:50px;"/><br><br>
          <div><input type="button" value="Add to Cart" style="float: left" class="btn btn-details default" onclick="addThisToCart();" class="add-to-cart"></input></div>
        </div>
      </div>
@@ -148,7 +147,7 @@ if(!isset($_SESSION["cart"])){
     var id = "<?php echo ($productId) ?>";
     var name = "<?php echo ($name); ?>";
     var price = "<?php echo ($price); ?>";
-    var quantity = 1;
+    var quantity = document.getElementById("quantity").value;
     var image = "<?php echo ($image); ?>";
 
     cart = <?php echo json_encode($_SESSION["cart"]); ?>;
