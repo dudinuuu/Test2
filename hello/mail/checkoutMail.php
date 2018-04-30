@@ -11,6 +11,7 @@
   $cvCode = strip_tags(htmlspecialchars($_POST['cvCode']));
   $cart=$_SESSION["cart"];
   $count=0;
+  $pricetotal = $_SESSION["totalpriceCart"];
   // echo $cart[0]['id'];
 
 
@@ -47,18 +48,18 @@
       //$mail->addAddress('royal.sport.101@gmail.com', 'Joe User');     // Add a recipient
       $mail->addAddress('royal.sport.101@gmail.com');               // Name is optional
       $mail->addReplyTo($email_address, 'Client');
-      $mail->addCC('cc@example.com');
+      $mail->addCC($email_address);
       $mail->addBCC('bcc@example.com');
 
       //Content
       $mail->isHTML(true);                        // Set email format to HTML
       $mail->Subject = 'Enquiry';
-      $mail->Body = 'Cart Details:';
+      $mail->Body = '<h1>Cart Details↴</h1>';
       foreach($cart as $value){
-        $mail->Body .= '<br>id-> '.$cart[$count]['id'].'<br>Name-> '.$cart[$count]['name'].'<br>Price-> €'.$cart[$count]['price'].'<br>Quantity->'.$cart[$count]['quantity'].'<br>';
+        $mail->Body .= '<br>id→ '.$cart[$count]['id'].'<br>Name→ '.$cart[$count]['name'].'<br>Price→ €'.$cart[$count]['price'].'<br>Quantity→ '.$cart[$count]['quantity'].'<br>';
         $count++;
       }
-      $mail->Body .=  '<br>CardNumber: '.$cardNumber. '<br>Expiry: '.$expityMonth.'/'.$expityYear.'<br>CV: '.$cvCode.'<br><br>Name: '.$name. '<br>Phone number: '.$phone. '<br>Email: '.$email_address;
+      $mail->Body .=  '<br><br>Total Price: €'.$pricetotal. '<br>CardNumber: '.$cardNumber. '<br>Expiry: '.$expityMonth.'/'.$expityYear.'<br>CV: '.$cvCode.'<br><br>Name: '.$name. '<br>Phone number: '.$phone. '<br>Email: '.$email_address;
       $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
       $mail->send();
