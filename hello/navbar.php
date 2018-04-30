@@ -43,7 +43,6 @@
           </a>
           <a style="font-size: 1em;color: gray;position: relative;bottom: 12px;">(<span id="items-cart">0</span>)</a>
         </li>
-
       </ul>
     </div>
   </div>
@@ -55,6 +54,9 @@
   float: left;
 }
 </style>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <script src="cart.js"></script>
     <script>
