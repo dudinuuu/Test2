@@ -55,7 +55,7 @@
       $mail->Subject = 'Enquiry';
       $mail->Body = 'Cart Details:';
       foreach($cart as $value){
-        $mail->Body .= '<br>id-> '.$cart[$count]['id'].'<br>Name-> '.$cart[$count]['name'][0].'<br>Price-> '.$cart[$count]['price'][0].'<br>Quantity->'.$cart[$count]['quantity'].'<br>';
+        $mail->Body .= '<br>id-> '.$cart[$count]['id'].'<br>Name-> '.$cart[$count]['name'].'<br>Price-> €'.$cart[$count]['price'].'<br>Quantity->'.$cart[$count]['quantity'].'<br>';
         $count++;
       }
       $mail->Body .=  '<br>CardNumber: '.$cardNumber. '<br>Expiry: '.$expityMonth.'/'.$expityYear.'<br>CV: '.$cvCode.'<br><br>Name: '.$name. '<br>Phone number: '.$phone. '<br>Email: '.$email_address;
