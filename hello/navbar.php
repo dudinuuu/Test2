@@ -14,10 +14,10 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
-        <li>
-          <div class="search_bar">
+        <li style="padding-right: 11em;padding-top: 0.3em;">
+          <div id="searchbarcss">
             <form action="listing.php" method="get">
-              <input type="text" name="search" placeholder="Search Website..">
+              <input size="30" type="text" name="search" placeholder="Search Website..."/><button type="submit" value="Submit" style="background-color: #343a40;border-color: #7f8f9852;">🔍</button>
             </form>
           </div>
         </li>
@@ -50,6 +50,12 @@
     </div
   </div>
 </nav>
+
+<style>
+.searchbarcss{
+  float: left;
+}
+</style>
 
     <script src="js/jQuery.js"></script>
     <script src="cart.js"></script>
