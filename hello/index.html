@@ -17,6 +17,7 @@
 
     <!-- Our own css file -->
     <link href="css/MyCss.css" rel="stylesheet">
+    <link href="css/photogrid.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/modern-business.css" rel="stylesheet">
@@ -87,7 +88,7 @@
       <div class="row">
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="checkout.php"><img class="card-img-top" src="http://www.abae.co.uk/aba/cache/file/3FE149AE-9A50-40E4-ABBF4435C41B122C.JPG" alt=""></a>
+            <a href="categoryPage.php?categoryId=3"><img class="card-img-top" src="http://www.abae.co.uk/aba/cache/file/3FE149AE-9A50-40E4-ABBF4435C41B122C.JPG" alt=""></a>
             <div class="transbox">
               <p>Boxing</p>
             </div>
@@ -95,7 +96,7 @@
         </div>
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="https://cdn-s3.si.com/s3fs-public/golf/2015/09/28/GettyImages-490327406.jpg" alt=""></a>
+            <a href="categoryPage.php?categoryId=1"><img class="card-img-top" src="https://cdn-s3.si.com/s3fs-public/golf/2015/09/28/GettyImages-490327406.jpg" alt=""></a>
             <div class="transbox">
               <p>Football</p>
             </div>
@@ -103,50 +104,88 @@
         </div>
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="https://i.pinimg.com/736x/51/40/40/514040901817a43f2e77f15001c99b7e--jordan--michael-jordan.jpg" alt=""></a>
+            <a href="categoryPage.php?categoryId=2"><img class="card-img-top" src="https://i.pinimg.com/736x/51/40/40/514040901817a43f2e77f15001c99b7e--jordan--michael-jordan.jpg" alt=""></a>
             <div class="transbox">
               <p>Basketball</p>
             </div>
           </div>
         </div>
       </div>
-      <!-- /.row -->
 
-      <!-- Features Section -->
-      <div class="row">
-        <div class="col-lg-6">
-          <h2>Modern Business Features</h2>
-          <p>The Modern Business template by Start Bootstrap includes:</p>
-          <ul>
-            <li>
-              <strong>Bootstrap v4</strong>
-            </li>
-            <li>jQuery</li>
-            <li>Font Awesome</li>
-            <li>Working contact form with validation</li>
-            <li>Unstyled page elements for easy customization</li>
-          </ul>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>
-        </div>
-        <div class="col-lg-6">
-          <img class="img-fluid rounded" src="http://placehold.it/700x450" alt="">
-        </div>
-      </div>
-      <!-- /.row -->
 
-      <hr>
+  <h1 class="my-4">INSTA SHOP</h1>
+
+<!-- Photo Grid -->
+<div class="row">
+  <div class="column" style="text-center">
+    <a href="listing.php?categoryId=1&pathId=1">
+      <figure>
+        <img src="http://wallpaperlepi.com/wp-content/uploads/2015/01/Adidas-Football-Shoes-Wallpaper-HD.jpg" style="width:100%">
+      </figure>
+    </a>
+    <a href="listing.php?categoryId=1&pathId=3">
+      <figure>
+        <img src="https://d2ij1pxeion66i.cloudfront.net/blog_component/52247/cb0cf39f02cf.jpg" style="width:100%">
+      </figure>
+    </a>
+    <a href="listing.php?categoryId=1&pathId=2">
+      <figure>
+        <img src="https://i.pinimg.com/564x/0f/b1/4b/0fb14b2c9d4e858d05fffd309764b9fe.jpg" style="width:100%">
+      </figure>
+    </a>
+  </div>
+  <div class="column">
+    <a href="listing.php?categoryId=2&pathId=1">
+      <figure>
+        <img src="http://www.tarantocrasbasket.com/wp-content/uploads/2017/09/Top-10-Points-to-Choose-Best-Basketball-Sneakers-770x430.jpg" style="width:100%">
+      </figure>
+    </a>
+    <a href="listing.php?categoryId=2&pathId=2">
+      <figure>
+        <img src="https://i.pinimg.com/564x/6f/fb/1a/6ffb1a10c4910df9c56022737e6e3836.jpg" style="width:100%">
+      </figure>
+    </a>
+    <a href="listing.php?categoryId=2&pathId=3">
+      <figure>
+        <img src="https://i.pinimg.com/564x/e4/dc/0f/e4dc0f92a71e11f8cf16bc6067683764.jpg" style="width:100%">
+      </figure>
+    </a>
+  </div>
+  <div class="column">
+    <a href="listing.php?categoryId=3&pathId=1">
+      <figure>
+        <img src="https://i.pinimg.com/564x/5a/5a/4e/5a5a4e5dccc9dba6443d7b9497d841c0.jpg" style="width:100%">
+      </figure>
+    </a>
+    <a href="listing.php?categoryId=3&pathId=2">
+      <figure>
+        <img src="http://adriennewollman.com/wp-content/uploads/2017/01/FEM_WC_01B_AbstractAlt_01_v2.jpg" style="width:100%">
+      </figure>
+    </a>
+    <a href="listing.php?categoryId=3&pathId=3">
+      <figure>
+        <img src="https://i.pinimg.com/736x/1a/43/ec/1a43ec0490021dd202b9ae19eda428eb--mma-boxing-kick-boxing.jpg" style="width:100%">
+      </figure>
+    </a>
+  </div>
+</div>
+
+<div class="row">
+  <p></p>
+</div>
 
       <!-- Call to Action Section -->
       <div class="row mb-4">
         <div class="col-md-8">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
+          <p>If you have any queries or difficulties using this website, click Contact Us in the navigation bar or the button on the right. We'll make sure to respond as soon as possible to make your experience as satisfying as possible</p>
         </div>
         <div class="col-md-4">
-          <a class="btn btn-lg btn-secondary btn-block" href="#">Call to Action</a>
+          <a class="btn btn-lg btn-secondary btn-block" href="contact.html">Contact Us</a>
         </div>
       </div>
 
     </div>
+
     <!-- /.container -->
 
     <!-- Footer -->
