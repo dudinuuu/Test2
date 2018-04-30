@@ -125,5 +125,10 @@ session_start();
       displayCart();
       post();
     });
+
+    if(array.length < 1 || array == undefined){
+      post();
+      location.reload();
+    }
   </script>
 </html>
