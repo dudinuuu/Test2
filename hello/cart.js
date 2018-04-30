@@ -21,7 +21,7 @@ function addcart(id, name, price, quantity, image){
   cart.push(item);
 }
 
-function removeOneItem(id){
+function removeOneItem(id){ //'-' button in shoppingcart.php
   for(var i in cart){
     if(cart[i].id == id){
       cart[i].quantity--;
@@ -33,7 +33,7 @@ function removeOneItem(id){
   }
 }
 
-function addOneItem(id){
+function addOneItem(id){//'+' button in shoppingcart.php
   for(var i in cart){
     if(cart[i].id == id){
       cart[i].quantity++;
@@ -42,11 +42,7 @@ function addOneItem(id){
   }
 }
 
-function printcart(){
-  console.log(cart);
-}
-
-function deleteItem(id){
+function deleteItem(id){// 'x' button in shoppingcart.php
   for(var i in cart){
     if(cart[i].id == id){
       cart.splice(i, 1);
@@ -84,19 +80,9 @@ function listCart(){
   return cartCopy;
 }
 
-function saveArray(){
-  $.post("saveSessionCart.php", {postname:cart.slice()},
-  function(data){
-    $("#result").html(data);
-
-  });
-}
-
-
 function post(){
   $.post("cartSession.php", {postname:cart.slice()},
   function(data){
     $("#result").html(data);
-
   });
 }

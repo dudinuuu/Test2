@@ -113,6 +113,8 @@ img:hover {
         }
         $("#show-cart").html(output);
         $("#total-cart").html(totalCostCart().toFixed(2));
+        console.log(cartArray);
+        console.log(cart);
       }
 
       displayCart();

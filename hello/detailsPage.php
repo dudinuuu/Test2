@@ -60,7 +60,6 @@ if(!isset($_SESSION["cart"])){
       $name = $xml->xpath("/RoyalSport/category[id = '{$categoryId}']/subcategory/product[id = '{$productId}']/name")[0];
       $price = $xml->xpath("/RoyalSport/category[id = '{$categoryId}']/subcategory/product[id = '{$productId}']/cost")[0];
       $image = $xml->xpath("/RoyalSport/category[id = '{$categoryId}']/subcategory/product[id = '{$productId}']/image")[0];
-      echo $image;
       ?>
 
      <!-- Portfolio Item Row -->
@@ -151,7 +150,6 @@ if(!isset($_SESSION["cart"])){
    <script src="cart.js"></script>
    <script>
    function addThisToCart(){
-    console.log("hello");
     var id = "<?php echo ($productId) ?>";
     var name = "<?php echo ($name); ?>";
     var price = "<?php echo ($price); ?>";
@@ -164,7 +162,6 @@ if(!isset($_SESSION["cart"])){
 
     post();
 
-    console.log(id);
     location.reload();
   }
 

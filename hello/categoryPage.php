@@ -146,8 +146,6 @@
     <script src="cart.js"></script>
     <script>
     function addThisToCartP(ide, name, price, image){
-     console.log("hello");
-
      cart = <?php echo json_encode($_SESSION["cart"]); ?>;
 
      var quantity = 1;
@@ -156,7 +154,6 @@
 
      post();
 
-     console.log(ide);
      location.reload();
    }
    </script>
