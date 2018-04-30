@@ -41,9 +41,7 @@
           <a href="shoppingcart.php"
             class="Library" id="Library" >
           </a>
-        </li>
-        <li style="font-size: 1em; color: gray; padding-top: 8px;">
-          <a>(<span id="items-cart">0</span>)</a>
+          <a style="font-size: 1em;color: gray;position: relative;bottom: 12px;">(<span id="items-cart">0</span>)</a>
         </li>
 
       </ul>
