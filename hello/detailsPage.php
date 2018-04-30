@@ -142,11 +142,6 @@ if(!isset($_SESSION["cart"])){
      <!-- /.container -->
    </footer>
 
-   <!-- Bootstrap core JavaScript -->
-   <script src="vendor/jquery/jquery.min.js"></script>
-   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-   <script src="js/jQuery.js"></script>
    <script src="cart.js"></script>
    <script>
    function addThisToCart(){

@@ -55,7 +55,6 @@
 }
 </style>
 
-    <script src="js/jQuery.js"></script>
     <script src="cart.js"></script>
     <script>
       cart = <?php echo json_encode($_SESSION["cart"]); ?>;
