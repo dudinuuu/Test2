@@ -1,5 +1,6 @@
 <?php
   include 'xmlLoader.php';
+  session_start();
   if(isset($_GET["categoryId"])){
     $categoryId=$_GET["categoryId"];
   }
@@ -9,6 +10,9 @@
   if(isset($_GET["search"])){
     $search=$_GET["search"];
     $product = $xml->xpath("/RoyalSport/category/subcategory/product[contains(description,'{$search}')]");
+  }
+  if(!isset($_SESSION["cart"])){
+    $_SESSION["cart"] = array();
   }
 ?>
 
@@ -97,7 +101,8 @@
                       <div style= 'float: right;'>
                       <div class="price"><?php echo "$$value->cost"; ?></div>
                       </div>
-                      <div style= 'float: left;'><button class="btn default">Add to Cart</button></div>
+                      <div> <?php echo "<button style='float: left' onclick='addThisToCartP(".'"'.$value->id.'","'.$value->name.'","'.$value->cost.'","'.$value->image.'"'.")' type='button' class='btn default'>Add to Cart</button>"; ?>
+                      </div>
                     </figcaption>
                   </figure>
                 <?php }
@@ -117,7 +122,8 @@
                       <div style= 'float: right;'>
                       <div class="price"><?php echo "$$value->cost"; ?></div>
                       </div>
-                      <div style= 'float: left;'><button class="btn default">Add to Cart</button></div>
+                      <div> <?php echo "<button style='float: left' onclick='addThisToCartP(".'"'.$value->id.'","'.$value->name.'","'.$value->cost.'","'.$value->image.'"'.")' type='button' class='btn default'>Add to Cart</button>"; ?>
+                      </div>
                     </figcaption>
                   </figure>
               <?php }
@@ -145,6 +151,22 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/jQuery.js"></script>
+    <script src="cart.js"></script>
+    <script>
+    function addThisToCartP(ide, name, price, image){
+     cart = <?php echo json_encode($_SESSION["cart"]); ?>;
+
+     var quantity = 1;
+
+     addcart(ide, name, price, quantity, image);
+
+     post();
+
+     location.reload();
+   }
+   </script>
 
   </body>
 
