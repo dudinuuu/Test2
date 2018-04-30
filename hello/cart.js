@@ -73,3 +73,10 @@ function post(){
     $("#result").html(data);
   });
 }
+
+function postTotal(total){
+  $.post("totalCostSession.php", {posttotal:total},
+  function(data){
+    $("#result").html(data);
+  });
+}

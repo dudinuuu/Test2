@@ -1,5 +1,6 @@
 <?php
 session_start();
+
  ?>
 
 <!DOCTYPE html>
@@ -55,7 +56,7 @@ session_start();
         <div class="total-button">
           <font size="6">Total Cart: €<span id="total-cart"></span></font>
           <br>
-          <a style="position:absolute; left:73%;" class="button" href="#">Checkout</a>
+          <a style="position:absolute; left:73%;" class="button" href="checkout.php">Checkout</a>
         </div>
       </div>
         <a class="button" href="deletesession.php">Delete cart</a>
@@ -102,6 +103,8 @@ session_start();
       }
       $("#show-cart").html(output);
       $("#total-cart").html(totalCostCart().toFixed(2));
+      postTotal(totalCostCart().toFixed(2));
+
       console.log(cart);
     }
 
