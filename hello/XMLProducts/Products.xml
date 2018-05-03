@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <RoyalSport>
 
   <category>
@@ -17,7 +16,7 @@
           <cost>29.99</cost>
           <description>Very Good nike shoes</description>
           <image>https://i.pinimg.com/736x/02/bf/87/02bf87d6ade05c685e796eae16dec81c--tennis-nike-mujer-roshe.jpg</image>
-          <stock>10</stock>
+          <stock>69</stock>
       </product>
     </subcategory>
     <subcategory>

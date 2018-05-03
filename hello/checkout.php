@@ -163,4 +163,21 @@
     }
   </script>
 
+  <?php
+
+    $xml = simplexml_load_file('./XMLProducts/Products.xml');
+
+    print_r($_SESSION["cart"]);
+
+    foreach($_SESSION["cart"] as $value){
+      echo $value.id;
+    }
+
+    // foreach ($xml->xpath("/RoyalSport/category/subcategory/product[id = '1']") as $value) {
+    //   $value->stock = "69";
+    // }
+    //
+    // file_put_contents('./XMLProducts/Products.xml', $xml->saveXML());
+   ?>
+
 </html>
