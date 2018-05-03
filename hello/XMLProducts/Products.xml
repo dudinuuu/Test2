@@ -16,7 +16,7 @@
           <cost>29.99</cost>
           <description>Very Good nike shoes</description>
           <image>https://i.pinimg.com/736x/02/bf/87/02bf87d6ade05c685e796eae16dec81c--tennis-nike-mujer-roshe.jpg</image>
-          <stock>10</stock>
+          <stock>8</stock>
       </product>
     </subcategory>
     <subcategory>
@@ -28,7 +28,7 @@
           <cost>19.99</cost>
           <description>Very Good  T-shirt</description>
           <image>https://i.pinimg.com/736x/ba/6e/af/ba6eafc52c24f16564a9729692af3327--zoom-graphic-tees.jpg</image>
-          <stock>10</stock>
+          <stock>9</stock>
       </product>
     </subcategory>
     <subcategory>

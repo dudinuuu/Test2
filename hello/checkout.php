@@ -107,7 +107,7 @@
               </div>
               <div id="success"></div>
               <!-- For success/fail messages -->
-              <button type="submit" class="btn btn-primary" onclick="updateStock();" id="checkoutButton">Checkout</button>
+              <button type="submit" class="btn btn-primary" onclick=" var delayInMilliseconds = 5000; setTimeout(function() {window.location.href = 'editStock.php';}, delayInMilliseconds);" id="checkoutButton">Checkout</button>
             </form>
           </div>
 
@@ -131,22 +131,6 @@
 
   </body>
 
-  <?php
 
-    $xml = simplexml_load_file('./XMLProducts/Products.xml');
-
-
-    foreach($_SESSION["cart"] as $value){
-
-      $oldStock = $xml->xpath("/RoyalSport/category/subcategory/product[id = '{$value['id']}']/stock")[0];
-      $quantity = $value['quantity'];
-      $newStock = $oldStock - $quantity;
-      foreach ($xml->xpath("/RoyalSport/category/subcategory/product[id = '{$value['id']}']") as $i) {
-        $i->stock = $newStock;
-      }
-
-    }
-    file_put_contents('./XMLProducts/Products.xml', $xml->saveXML());
-   ?>
 
 </html>

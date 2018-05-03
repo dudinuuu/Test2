@@ -2,6 +2,7 @@
   session_start();
   include 'xmlLoader.php';
 
+
   $name = strip_tags(htmlspecialchars($_POST['name']));
   $email_address = strip_tags(htmlspecialchars($_POST['email']));
   $phone = strip_tags(htmlspecialchars($_POST['phone']));
@@ -13,7 +14,6 @@
   $count=0;
   $pricetotal = $_SESSION["totalpriceCart"];
   // echo $cart[0]['id'];
-
 
 
   use PHPMailer\PHPMailer\PHPMailer;
@@ -68,4 +68,7 @@
   } catch (Exception $e) {
       echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
   }
+
+
+
 ?>
