@@ -76,7 +76,7 @@ if(!isset($_SESSION["cart"])){
          <h3 class="my-3">Description</h3>
          <p> <?php echo $xml->xpath("/RoyalSport/category[id = '{$categoryId}']/subcategory/product[id = '{$productId}']/description")[0];?> </p>
          <h3 class="my-3">Quantity</h3>
-         <input id="quantity" type="number" name="quantity" value="1" min="1" max="<?php echo $stock; ?>" style="width:50px;"/><br><br>
+         <input id="quantity" type="number" name="quantity" value="1" min="1" max="<?php echo $stock; ?>" style="width:50px;" onchange="quantityCheck()"/><br><br>
          <div><input type="button" value="Add to Cart" style="float: left" class="btn btn-details default" onclick="addThisToCart();" class="add-to-cart"></input></div>
        </div>
      </div>
@@ -164,9 +164,16 @@ if(!isset($_SESSION["cart"])){
 
     location.reload();
 
-}
+    }
   }
-
+  function quantityCheck(){
+     var stock = "<?php echo ($stock); ?>";
+     var quantity = document.getElementById("quantity").value;
+     if(quantity>stock){
+       alert("le bro");
+       document.getElementById("quantity").value = stock;
+     }
+   }
   </script>
 
  </body>
