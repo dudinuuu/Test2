@@ -17,6 +17,7 @@
           <cost>29.99</cost>
           <description>Very Good nike shoes</description>
           <image>https://i.pinimg.com/736x/02/bf/87/02bf87d6ade05c685e796eae16dec81c--tennis-nike-mujer-roshe.jpg</image>
+          <stock>10</stock>
       </product>
     </subcategory>
     <subcategory>
@@ -28,6 +29,7 @@
           <cost>19.99</cost>
           <description>Very Good  T-shirt</description>
           <image>https://i.pinimg.com/736x/ba/6e/af/ba6eafc52c24f16564a9729692af3327--zoom-graphic-tees.jpg</image>
+          <stock>10</stock>
       </product>
     </subcategory>
     <subcategory>
@@ -39,6 +41,7 @@
           <cost>99.99</cost>
           <description>extreme gloves</description>
           <image>http://www.labodegacardiff.co.uk/images/labod/nike-gloves-game-royal-volt-lightweight-rival-run-glove-mens-lightweight-mittens-by-running-60FD.jpg</image>
+          <stock>10</stock>
       </product>
     </subcategory>
   </category>
@@ -59,6 +62,7 @@
           <cost>77.97</cost>
           <description>Mhux worth it nike shoes</description>
           <image>https://i.pinimg.com/564x/4b/99/a2/4b99a20eba1607dcbb90d78a3a094189.jpg</image>
+          <stock>10</stock>
       </product>
     </subcategory>
     <subcategory>
@@ -70,6 +74,7 @@
           <cost>29.99</cost>
           <description>Mhux worth it basketball celtics shirt</description>
           <image>https://i.pinimg.com/564x/f8/c2/a6/f8c2a62d1fd423dc244ec2dfc188e65c.jpg</image>
+          <stock>10</stock>
       </product>
     </subcategory>
     <subcategory>
@@ -81,6 +86,7 @@
           <cost>11.99</cost>
           <description>mhux worth it bouncy nike ball</description>
           <image>https://i.pinimg.com/564x/f6/80/49/f6804982750d89554dfea3187c6d0ae5.jpg</image>
+          <stock>10</stock>
       </product>
     </subcategory>
   </category>
@@ -100,6 +106,7 @@
         <cost>29.99</cost>
         <description>Very Good Adidas gloves</description>
         <image>https://mmafightstore.com.au/mma/wp-content/uploads/2015/02/adidas-ultima-boxing-gloves-pair-red.jpg</image>
+        <stock>10</stock>
     </product>
   </subcategory>
   <subcategory>
@@ -111,6 +118,7 @@
     <cost>24.99</cost>
     <description>Very good Everlast Boxing Shorts</description>
     <image>https://i.pinimg.com/originals/9c/b8/44/9cb84441ffc1aa651acaa3b6a10b3aa5.jpg</image>
+    <stock>10</stock>
   </product>
 </subcategory>
 <subcategory>
@@ -122,6 +130,7 @@
   <cost>14.99</cost>
   <description>Very good Venom Boxing Mouth Guards</description>
   <image>https://s-media-cache-ak0.pinimg.com/originals/cf/ba/87/cfba8775d11b51ac257ab6092593b7c1.jpg</image>
+  <stock>10</stock>
 </product>
 </subcategory>
 
