@@ -1,4 +1,6 @@
-<?php session_start();
+<?php
+  session_start();
+  include 'xmlLoader.php';
 ?>
 
 <!DOCTYPE html>
@@ -134,7 +136,7 @@
       cart = <?php echo json_encode($_SESSION["cart"]); ?>;
 
         for(var i in cart){
-          var newstock = cart[i].stock = cart[i].quantity;
+          //var newstock = cart[i].stock = cart[i].quantity;
 
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
@@ -147,16 +149,16 @@
 
         function myFunction(xml) {
             var xmlDoc = xml.responseXML;
-            var x;
-            var txt = "";
-            x = xmlDoc.getElementsByTagName("title")[0].childNodes[0];
-            txt += x.nodeValue + "<br>";
-            x.nodeValue = "Easy Cooking";
-            x = xmlDoc.getElementsByTagName("title")[0].childNodes[0];
-            txt += x.nodeValue + "<br>";
-            document.getElementById("demo").innerHTML = txt;
+            var stock = xmlDoc.getElementsByTagName("stock")[0].childNodes[0];
+            console.log(stock.nodeValue);
+            var oldStock = stock.textContent;
+            var quantity = cart[i].quantity;
+            var newStock = oldStock-quantity;
+            stock.nodeValue = newStock;
+            console.log(stock.nodeValue);
         }
-        }
+      }
+      //location.reload();
 
     }
   </script>
