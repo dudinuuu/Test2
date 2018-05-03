@@ -1,6 +1,3 @@
-<?php session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -105,7 +102,7 @@
               </div>
               <div id="success"></div>
               <!-- For success/fail messages -->
-              <button type="submit" class="btn btn-primary" onclick="updateStock();" id="checkoutButton">Checkout</button>
+              <button type="submit" class="btn btn-primary" id="checkoutButton">Checkout</button>
             </form>
           </div>
 
@@ -128,37 +125,5 @@
     <script src="js/checkout.js"></script>
 
   </body>
-  <script src="cart.js"></script>
-  <script>
-    function updateStock(){
-      cart = <?php echo json_encode($_SESSION["cart"]); ?>;
-
-        for(var i in cart){
-          var newstock = cart[i].stock = cart[i].quantity;
-
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                myFunction(this);
-            }
-        };
-        xhttp.open("GET", "./XMLProducts/Products.xml", true);
-        xhttp.send();
-
-        function myFunction(xml) {
-            var xmlDoc = xml.responseXML;
-            var x;
-            var txt = "";
-            x = xmlDoc.getElementsByTagName("title")[0].childNodes[0];
-            txt += x.nodeValue + "<br>";
-            x.nodeValue = "Easy Cooking";
-            x = xmlDoc.getElementsByTagName("title")[0].childNodes[0];
-            txt += x.nodeValue + "<br>";
-            document.getElementById("demo").innerHTML = txt;
-        }
-        }
-
-    }
-  </script>
 
 </html>

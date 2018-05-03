@@ -162,30 +162,7 @@ if(!isset($_SESSION["cart"])){
 
     post();
 
-    //location.reload();
-
-    //location.reload();
-
-
-//-----
-
-
-var xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function() {
-if (this.readyState == 4 && this.status == 200) {
-    myFunction(this);
-}
-};
-xhttp.open("GET", "./XMLProducts/Products.xml", true);
-xhttp.send();
-
-function myFunction(xml) {
-var xmlDoc = xml.responseXML;
-var x = xmlDoc.getElementsByTagName("product")[id-1];
-var y = x.getElementsByTagName("name")[0];
-console.log(y.textContent);
-
-}
+    location.reload();
   }
 
   </script>
