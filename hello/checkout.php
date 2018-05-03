@@ -130,54 +130,23 @@
     <script src="js/checkout.js"></script>
 
   </body>
-  <script src="cart.js"></script>
-  <script>
-    function updateStock(){
-      cart = <?php echo json_encode($_SESSION["cart"]); ?>;
-
-        for(var i in cart){
-          //var newstock = cart[i].stock = cart[i].quantity;
-
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                myFunction(this);
-            }
-        };
-        xhttp.open("GET", "./XMLProducts/Products.xml", true);
-        xhttp.send();
-
-        function myFunction(xml) {
-            var xmlDoc = xml.responseXML;
-            var stock = xmlDoc.getElementsByTagName("stock")[0].childNodes[0];
-            console.log(stock.nodeValue);
-            var oldStock = stock.textContent;
-            var quantity = cart[i].quantity;
-            var newStock = oldStock-quantity;
-            stock.nodeValue = newStock;
-            console.log(stock.nodeValue);
-        }
-      }
-      //location.reload();
-
-    }
-  </script>
 
   <?php
 
     $xml = simplexml_load_file('./XMLProducts/Products.xml');
 
-    print_r($_SESSION["cart"]);
 
     foreach($_SESSION["cart"] as $value){
-      echo $value.id;
-    }
 
-    // foreach ($xml->xpath("/RoyalSport/category/subcategory/product[id = '1']") as $value) {
-    //   $value->stock = "69";
-    // }
-    //
-    // file_put_contents('./XMLProducts/Products.xml', $xml->saveXML());
+      $oldStock = $xml->xpath("/RoyalSport/category/subcategory/product[id = '{$value['id']}']/stock")[0];
+      $quantity = $value['quantity'];
+      $newStock = $oldStock - $quantity;
+      foreach ($xml->xpath("/RoyalSport/category/subcategory/product[id = '{$value['id']}']") as $i) {
+        $i->stock = $newStock;
+      }
+
+    }
+    file_put_contents('./XMLProducts/Products.xml', $xml->saveXML());
    ?>
 
 </html>
