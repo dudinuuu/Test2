@@ -99,26 +99,28 @@
         <div class="row">
 
           <!-- Creating a figure for each product using foreach -->
-          <?php foreach ($xml->xpath("/RoyalSport/category[id=$categoryId]/subcategory/product") as $value){ ?>
-            <figure class="snip1268">
-              <div class="imageContainer">
-                <div class="image">
-                  <img src="<?php echo $value->image; ?>" alt="sq-sample4"/>
-                  <a href="detailsPage.php?categoryId=<?php echo $categoryId; ?>&productId=<?php echo $value->id; ?>" class="add-to-cart">Details</a>
+          <?php foreach ($xml->xpath("/RoyalSport/category[id=$categoryId]/subcategory/product") as $value){
+            if($value->stock != 0){ ?>
+              <figure class="snip1268">
+                <div class="imageContainer">
+                  <div class="image">
+                    <img src="<?php echo $value->image; ?>" alt="sq-sample4"/>
+                    <a href="detailsPage.php?categoryId=<?php echo $categoryId; ?>&productId=<?php echo $value->id; ?>" class="add-to-cart">Details</a>
+                  </div>
                 </div>
-              </div>
-              <figcaption>
-                <h2><?php echo $value->name; ?></h2>
-                <p><?php echo $value->description; ?></p>
-                <div style= 'float: right;'>
-                <div class="price"><?php echo "$$value->cost"; ?></div>
-                </div>
-                <div> <?php echo "<button style='float: left' onclick='addThisToCartP(".'"'.$value->id.'","'.$value->name.'","'.$value->cost.'","'.$value->image.'","'.$value->stock.'"'.")' type='button' class='btn default'>Add to Cart</button>"; ?>
-                </div>
-              <!-- </div> -->
-              </figcaption>
-            </figure>
-          <?php } ?>
+                <figcaption>
+                  <h2><?php echo $value->name; ?></h2>
+                  <p><?php echo $value->description; ?></p>
+                  <div style= 'float: right;'>
+                  <div class="price"><?php echo "$$value->cost"; ?></div>
+                  </div>
+                  <div> <?php echo "<button style='float: left' onclick='addThisToCartP(".'"'.$value->id.'","'.$value->name.'","'.$value->cost.'","'.$value->image.'","'.$value->stock.'"'.")' type='button' class='btn default'>Add to Cart</button>"; ?>
+                  </div>
+                <!-- </div> -->
+                </figcaption>
+              </figure>
+          <?php }
+          } ?>
 
         </div>
         <!-- /.row -->

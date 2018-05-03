@@ -87,7 +87,8 @@
                 $pid = $xml->xpath("/RoyalSport/category/subcategory/product[contains(description,'{$search}')]/id")[0];
                 if(count($product) <= 1)header("Location: detailsPage.php?categoryId=".$cid."&productId=".$pid);
 
-                foreach ($product as $value){ ?>
+                foreach ($product as $value){
+                  if($value->stock != 0){ ?>
                   <figure class="snip1268">
                     <div class="imageContainer">
                       <div class="image">
@@ -106,9 +107,11 @@
                     </figcaption>
                   </figure>
                 <?php }
+                  }
               }
               else if(isset($categoryId) && isset($pathId)){
-                foreach ($xml->xpath("/RoyalSport/category[id=$categoryId]/subcategory[id=$pathId]/product") as $value){ ?>
+                foreach ($xml->xpath("/RoyalSport/category[id=$categoryId]/subcategory[id=$pathId]/product") as $value){
+                  if($value->stock != 0){ ?>
                   <figure class="snip1268">
                     <div class="imageContainer">
                       <div class="image">
@@ -127,6 +130,7 @@
                     </figcaption>
                   </figure>
               <?php }
+                }
             } ?>
 
           <!-- /.row -->

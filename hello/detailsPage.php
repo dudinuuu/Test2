@@ -6,7 +6,7 @@ if(!isset($_SESSION["cart"])){
   $categoryId=$_GET["categoryId"];
   $productId=$_GET["productId"];
   $xml = simplexml_load_file('./XMLProducts/Products.xml');
-  $product = $xml->xpath("/RoyalSport/category[id = '{$categoryId}']/product[id = '{$productId}']");
+  $stock = $xml->xpath("/RoyalSport/category[id = '{$categoryId}']/subcategory/product[id = '{$productId}']/stock")[0];
 ?>
 
 <head>
@@ -76,7 +76,7 @@ if(!isset($_SESSION["cart"])){
          <h3 class="my-3">Description</h3>
          <p> <?php echo $xml->xpath("/RoyalSport/category[id = '{$categoryId}']/subcategory/product[id = '{$productId}']/description")[0];?> </p>
          <h3 class="my-3">Quantity</h3>
-         <input id="quantity" type="number" name="quantity" value="1" min="1" max="100" style="width:50px;"/><br><br>
+         <input id="quantity" type="number" name="quantity" value="1" min="1" max="<?php echo $stock; ?>" style="width:50px;"/><br><br>
          <div><input type="button" value="Add to Cart" style="float: left" class="btn btn-details default" onclick="addThisToCart();" class="add-to-cart"></input></div>
        </div>
      </div>
@@ -87,46 +87,50 @@ if(!isset($_SESSION["cart"])){
 
      <div class="row">
 
-       <?php
-          $array = array();
-          for($count = 0; $count<4 ; $count++){
-            $rpid =rand(1,count($xml->xpath("/RoyalSport/category/subcategory/product"))); //pick a random product
-            $array[$count]=$rpid;
+     <?php
+        $array = array();
+        for($count = 0; $count<4 ; $count++){
+          $rpid =rand(1,count($xml->xpath("/RoyalSport/category/subcategory/product"))); //pick a random product
+          $array[$count]=$rpid;
 
-            //Featured items to be unique using flags
-            $flag=false;
-            for($i=1; $i<count($array); $i++){
-              if($array[$i-1]==$rpid){
-                $flag=true;
-                break;
-              }
-              else{
-                $flag=false;
-              }
-            }
-            if($rpid==$productId){ //check if any featured product is the same as the product shown
+          //Featured items to be unique using flags
+          $flag=false;
+          for($i=1; $i<count($array); $i++){
+            if($array[$i-1]==$rpid){
               $flag=true;
+              break;
             }
+            else{
+              $flag=false;
+            }
+          }
+          if($rpid==$productId){ //check if any featured product is the same as the product being shown in the current site
+            $flag=true;
+          }
+          if(($xml->xpath("/RoyalSport/category/subcategory/product[id ='{$rpid}']/stock"))[0] == 0){
+            $flag=true;
+          }
 
+
+          if($flag==false){
+            //getting the category id of the random product
             $rcid =$xml->xpath("/RoyalSport/category/subcategory/product[id=$rpid]/parent::*/parent::*/id")[0];
-            if($flag==false){
-              foreach ($xml->xpath("/RoyalSport/category[id ='{$rcid}']/subcategory/product[id ='{$rpid}']") as $value){
-         ?>
+            foreach ($xml->xpath("/RoyalSport/category[id ='{$rcid}']/subcategory/product[id ='{$rpid}']") as $value){ ?>
             <div class="col-md-3 col-sm-6 mb-4">
                <a href="detailsPage.php?categoryId=<?php echo $rcid; ?>&productId=<?php echo $rpid; ?>">
                  <img class="img-fluid" src="<?php echo $xml->xpath("/RoyalSport/category[id ='{$rcid}']/subcategory/product[id ='{$rpid}']/image")[0]; ?>" alt="">
                </a>
-
                <h4><?php echo $xml->xpath("/RoyalSport/category[id ='{$rcid}']/subcategory/product[id ='{$rpid}']/name")[0]; ?></h4>
                <p><?php echo $xml->xpath("/RoyalSport/category[id ='{$rcid}']/subcategory/product[id ='{$rpid}']/description")[0]; ?></p>
                <div style= 'float: left;' class="price"><?php echo "$".$xml->xpath("/RoyalSport/category[id ='{$rcid}']/subcategory/product[id ='{$rpid}']/cost")[0]; ?></div>
             </div>
-         <?php } }
-           else{
-             $count--;
-             $flag=false;
-           }
-         } ?>
+           <?php }
+          }
+          else{
+           $count--;
+           $flag=false;
+          }
+       } ?>
      </div>
      <!-- /.row -->
 
