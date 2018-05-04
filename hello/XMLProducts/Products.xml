@@ -28,7 +28,7 @@
           <cost>19.99</cost>
           <description>Very Good  T-shirt</description>
           <image>https://i.pinimg.com/736x/ba/6e/af/ba6eafc52c24f16564a9729692af3327--zoom-graphic-tees.jpg</image>
-          <stock>10</stock>
+          <stock>9</stock>
       </product>
     </subcategory>
     <subcategory>
@@ -40,7 +40,7 @@
           <cost>99.99</cost>
           <description>extreme gloves</description>
           <image>https://s7d2.scene7.com/is/image/dkscdn/16NIKGTHRMFTLTRNGCLDA_Vintage_Green_Volt_is/</image>
-          <stock>10</stock>
+          <stock>9</stock>
       </product>
     </subcategory>
   </category>
