@@ -107,7 +107,7 @@
               </div>
               <div id="success"></div>
               <!-- For success/fail messages -->
-              <button type="submit" class="btn btn-primary" onclick=" var delayInMilliseconds = 3000; setTimeout(function() {window.location.href = 'editStock.php';}, delayInMilliseconds);" id="checkoutButton">Checkout</button>
+              <button type="submit" class="btn btn-primary" id="checkoutButton">Checkout</button>
             </form>
           </div>
 

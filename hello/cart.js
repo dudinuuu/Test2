@@ -1,6 +1,4 @@
-
 var cart = [];
-
 
 var Item = function(id, name, price, quantity, image, stock){
   this.id = id//unique ID is needed here for each item.

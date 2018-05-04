@@ -14,9 +14,7 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
+  <meta name="description" content="Category Page">
   <title>Royal Sport - Find what you need</title>
   <!-- favicon added to the tab-->
   <link rel="icon" href="https://cdn3.iconfinder.com/data/icons/sport-games-1/512/royal-king-queen-luxury-crown-512.png">
@@ -39,9 +37,9 @@
   <!-- navigation bar loader -->
   <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
   <script>
-  $(function(){
-    $("#navigation").load("navbar.php");
-  });
+    $(function(){
+      $("#navigation").load("navbar.php");
+    });
   </script>
 
 </head>

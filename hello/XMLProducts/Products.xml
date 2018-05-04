@@ -16,7 +16,7 @@
           <cost>29.99</cost>
           <description>Very Good nike shoes</description>
           <image>https://i.pinimg.com/736x/02/bf/87/02bf87d6ade05c685e796eae16dec81c--tennis-nike-mujer-roshe.jpg</image>
-          <stock>7</stock>
+          <stock>9</stock>
       </product>
     </subcategory>
     <subcategory>
@@ -28,7 +28,7 @@
           <cost>19.99</cost>
           <description>Very Good  T-shirt</description>
           <image>https://i.pinimg.com/736x/ba/6e/af/ba6eafc52c24f16564a9729692af3327--zoom-graphic-tees.jpg</image>
-          <stock>8</stock>
+          <stock>10</stock>
       </product>
     </subcategory>
     <subcategory>
@@ -48,7 +48,6 @@
   <category>
     <id>2</id>
     <name>Basketball</name>
-    <!-- https://i.pinimg.com/564x/0e/9c/ba/0e9cbad3885a5e561431155458ae0245.jpg -->
     <carouselImage>https://i.pinimg.com/originals/0e/9c/ba/0e9cbad3885a5e561431155458ae0245.jpg</carouselImage>
     <carouselImage>https://i.pinimg.com/originals/b2/cd/b7/b2cdb7dff3828f5a00f86642e4165f5a.jpg</carouselImage>
     <carouselImage>https://i.pinimg.com/originals/08/26/76/0826766066b10f85fd2b18ac29f1515f.jpg</carouselImage>
@@ -99,40 +98,39 @@
     <subcategory>
       <name>Boxing Gloves</name>
       <id>1</id>
-    <product>
+      <product>
         <id>7</id>
         <name>Adidas Boxing Gloves</name>
         <cost>29.99</cost>
         <description>Very Good Adidas gloves</description>
         <image>https://mmafightstore.com.au/mma/wp-content/uploads/2015/02/adidas-ultima-boxing-gloves-pair-red.jpg</image>
         <stock>10</stock>
-    </product>
-  </subcategory>
-  <subcategory>
-    <name>Boxing Shorts</name>
-    <id>2</id>
-  <product>
-    <id>8</id>
-    <name>Everlast Boxing Shorts</name>
-    <cost>24.99</cost>
-    <description>Very good Everlast Boxing Shorts</description>
-    <image>https://i.pinimg.com/originals/9c/b8/44/9cb84441ffc1aa651acaa3b6a10b3aa5.jpg</image>
-    <stock>10</stock>
-  </product>
-</subcategory>
-<subcategory>
-  <name>Boxing Mouth Guards</name>
-  <id>3</id>
-<product>
-  <id>9</id>
-  <name>Venom Boxing Mouth Guards</name>
-  <cost>14.99</cost>
-  <description>Very good Venom Boxing Mouth Guards</description>
-  <image>https://s-media-cache-ak0.pinimg.com/originals/cf/ba/87/cfba8775d11b51ac257ab6092593b7c1.jpg</image>
-  <stock>10</stock>
-</product>
-</subcategory>
-
+      </product>
+    </subcategory>
+    <subcategory>
+      <name>Boxing Shorts</name>
+      <id>2</id>
+      <product>
+        <id>8</id>
+        <name>Everlast Boxing Shorts</name>
+        <cost>24.99</cost>
+        <description>Very good Everlast Boxing Shorts</description>
+        <image>https://i.pinimg.com/originals/9c/b8/44/9cb84441ffc1aa651acaa3b6a10b3aa5.jpg</image>
+        <stock>10</stock>
+      </product>
+    </subcategory>
+    <subcategory>
+      <name>Boxing Mouth Guards</name>
+      <id>3</id>
+      <product>
+        <id>9</id>
+        <name>Venom Boxing Mouth Guards</name>
+        <cost>14.99</cost>
+        <description>Very good Venom Boxing Mouth Guards</description>
+        <image>https://s-media-cache-ak0.pinimg.com/originals/cf/ba/87/cfba8775d11b51ac257ab6092593b7c1.jpg</image>
+        <stock>10</stock>
+      </product>
+    </subcategory>
   </category>
 
 </RoyalSport>

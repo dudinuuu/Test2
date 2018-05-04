@@ -17,7 +17,6 @@ foreach($_SESSION["cart"] as $value){
 }
 file_put_contents('./XMLProducts/Products.xml', $xml->saveXML());
 
-
-
+session_destroy();
+include 'checkoutComplete.html';
 ?>
-<meta http-equiv="refresh" content="0; url=deletesession.php" />
