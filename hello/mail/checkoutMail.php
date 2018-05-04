@@ -49,7 +49,6 @@
       $mail->addAddress('royal.sport.101@gmail.com');               // Name is optional
       $mail->addReplyTo($email_address, 'Client');
       $mail->addCC($email_address);
-      $mail->addBCC('bcc@example.com');
 
       //Content
       $mail->isHTML(true);                        // Set email format to HTML
