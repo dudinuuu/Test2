@@ -1,5 +1,4 @@
 <?php
-session_start();
-
+  session_start();
   $_SESSION["totalpriceCart"] = $_POST["posttotal"];
-  ?>
+?>

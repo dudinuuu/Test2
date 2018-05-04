@@ -1,7 +1,6 @@
 <?php
-session_start();
-
- ?>
+  session_start();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,24 +9,26 @@ session_start();
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
+    <meta name="description" content="Shopping cart page">
     <title>Royal Sport - Find what you need</title>
     <!-- favicon added to the tab-->
     <link rel="icon" href="https://cdn3.iconfinder.com/data/icons/sport-games-1/512/royal-king-queen-luxury-crown-512.png">
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" type="text/css" href="css/shoppingcartcss.css">
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/MyCss.css">
 
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" type="text/css" href="css/shoppingcartcss.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Our own css file -->
+    <link rel="stylesheet" type="text/css" href="css/MyCss.css">
 
     <!-- navigation bar loader -->
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script>
-    $(function(){
-      $("#navigation").load("navbar.php");
-    });
+      $(function(){
+        $("#navigation").load("navbar.php");
+      });
     </script>
   </head>
 
@@ -48,7 +49,7 @@ session_start();
     }
     else{ ?>
       <br><br><br>
-      <h1>🛒Shopping cart🛒</h1>
+      <h1>Your Shopping Cart</h1>
 
       <div>
         <table id="show-cart"></table>
@@ -131,9 +132,5 @@ session_start();
       post();
 
     });
-
-
-
-
   </script>
 </html>

@@ -4,7 +4,6 @@ include 'xmlLoader.php';
 
 $xml = simplexml_load_file('./XMLProducts/Products.xml');
 
-
 foreach($_SESSION["cart"] as $value){
 
   $oldStock = $xml->xpath("/RoyalSport/category/subcategory/product[id = '{$value['id']}']/stock")[0];

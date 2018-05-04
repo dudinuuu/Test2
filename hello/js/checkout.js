@@ -42,7 +42,7 @@ $(function() {
               .append('</div>');
             //clear all fields
             $('#checkoutForm').trigger("reset");
-            location.href = 'editStock.php';
+            location.href = 'updateStock.php';
           },
           error: function() {
             // Fail message

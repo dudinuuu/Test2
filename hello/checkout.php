@@ -10,20 +10,21 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-
+    <meta name="description" content="Purchase checkout page">
     <title>Royal Sport - Find what you need</title>
-
+    <!-- favicon added to the tab-->
     <link rel="icon" href="https://cdn3.iconfinder.com/data/icons/sport-games-1/512/royal-king-queen-luxury-crown-512.png">
 
+    <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Custom styles for this template -->
     <link href="css/MyCss.css" rel="stylesheet">
 
+    <!-- Custom styles for this template -->
     <link href="css/modern-business.css" rel="stylesheet">
 
+    <!-- navigation bar loader -->
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script>
     $(function(){
@@ -35,11 +36,12 @@
 
   <body>
 
-
+    <!-- Navigation -->
     <div id="navigation"></div>
 
     <div class="container">
 
+      <!-- title and navigation -->
       <h1 class="mt-4 mb-3">Checkout</h1>
 
       <ol class="breadcrumb">
@@ -51,10 +53,11 @@
 
     <div class="container">
 
-      <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
+      <!-- Input form for checkout -->
       <div class="row">
         <div class="col-lg-8 mb-4">
           <h3>Enter personal deatils:</h3>
+          <!-- Form start -->
           <form name="checkout" id="checkoutForm" novalidate>
             <div class="control-group form-group">
               <div class="controls">
@@ -107,14 +110,17 @@
               </div>
               <div id="success"></div>
               <!-- For success/fail messages -->
+              <!-- Calling checkoutButton in checkout.js -->
               <button type="submit" class="btn btn-primary" id="checkoutButton">Checkout</button>
             </form>
+            <!-- Form end -->
           </div>
-
         </div>
-      <!-- /.row -->
+        <!-- /.row -->
       </div>
+      <!-- /.container -->
     </div>
+    <!-- /.container -->
 
 
     <!-- Footer -->
@@ -125,12 +131,9 @@
       <!-- /.container -->
     </footer>
 
-    <!-- Contact form JavaScript -->
+    <!-- checkout form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
     <script src="js/checkout.js"></script>
 
   </body>
-
-
-
 </html>

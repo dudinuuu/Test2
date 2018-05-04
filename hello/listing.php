@@ -1,6 +1,6 @@
 <?php
-  include 'xmlLoader.php';
   session_start();
+  include 'xmlLoader.php';
   if(isset($_GET["categoryId"])){
     $categoryId=$_GET["categoryId"];
   }
@@ -23,9 +23,7 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
+  <meta name="description" content="Listing items page">
   <title>Royal Sport - Find what you need</title>
   <!-- favicon added to the tab-->
   <link rel="icon" href="https://cdn3.iconfinder.com/data/icons/sport-games-1/512/royal-king-queen-luxury-crown-512.png">
@@ -132,11 +130,8 @@
               <?php }
                 }
             } ?>
-
-          <!-- /.row -->
-
         </div>
-        <!-- /.col-lg-9 -->
+        <!-- /.row -->
 
       </div>
       <!-- /.row -->
