@@ -67,7 +67,7 @@ if(!isset($_SESSION["cart"])){
      <div class="row">
 
        <div class="col-md-8">
-         <img class="img-fluid" src="<?php echo $xml->xpath("/RoyalSport/category[id = '{$categoryId}']/subcategory/product[id = '{$productId}']/image")[0]; ?>" alt="">
+         <img class="img-fluid" src="<?php echo $image; ?>" style="height:auto; width:500px;">
        </div>
 
        <div class="col-md-4">
