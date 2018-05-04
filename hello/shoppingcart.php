@@ -14,14 +14,14 @@
     <!-- favicon added to the tab-->
     <link rel="icon" href="https://cdn3.iconfinder.com/data/icons/sport-games-1/512/royal-king-queen-luxury-crown-512.png">
 
-    <!-- Custom styles for this template -->
-    <link rel="stylesheet" type="text/css" href="css/shoppingcartcss.css">
-
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Our own css file -->
     <link rel="stylesheet" type="text/css" href="css/MyCss.css">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" type="text/css" href="css/shoppingcartcss.css">
 
     <!-- navigation bar loader -->
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
