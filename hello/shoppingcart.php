@@ -85,7 +85,7 @@ session_start();
       var output = "<tr><th>Image</th><th>Name</th><th>Quantity</th><th>Price</th><th>-</th><th>+</th><th>Delete</th></tr>";
       for(var i in cart){
         output += "<tr><td>"
-        +"<img src='"+cart[i].image+"' alt='ahdem ostja' border='3' height='100' width='100'></img>"
+        +"<img src='"+cart[i].image+"' alt='product image' border='3' height='100' width='100'></img>"
         +"</td><td style='font-size: 20px;'>"+cart[i].name
         +"</td><td style='font-size: 20px;'>"+cart[i].quantity
         +"</td><td style='font-size: 20px;'>€"+cart[i].price
