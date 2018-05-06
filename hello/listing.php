@@ -34,9 +34,6 @@
   <!-- Our own css file -->
   <link href="css/RoyalSportCss.css" rel="stylesheet">
 
-  <!--image buttons css-->
-  <link rel="stylesheet" type="text/css" href="css/snip1268.css">
-
   <!-- Custom styles for this template -->
   <link href="css/categoryPage.css" rel="stylesheet">
 
