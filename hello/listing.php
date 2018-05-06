@@ -38,9 +38,6 @@
   <link rel="stylesheet" type="text/css" href="css/snip1268.css">
 
   <!-- Custom styles for this template -->
-  <link href="css/shop-homepage.css" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
   <link href="css/categoryPage.css" rel="stylesheet">
 
   <!-- navigation bar loader -->

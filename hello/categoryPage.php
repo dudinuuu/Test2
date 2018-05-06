@@ -22,9 +22,6 @@
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Custom styles for this template -->
-  <link href="css/shop-homepage.css" rel="stylesheet">
-
   <!--image buttons css-->
   <link rel="stylesheet" type="text/css" href="css/snip1268.css">
 
