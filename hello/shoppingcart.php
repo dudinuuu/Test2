@@ -18,7 +18,7 @@
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Our own css file -->
-    <link rel="stylesheet" type="text/css" href="css/MyCss.css">
+    <link rel="stylesheet" type="text/css" href="css/RoyalSportCss.css">
 
     <!-- Custom styles for this template -->
     <link rel="stylesheet" type="text/css" href="css/shoppingcartcss.css">

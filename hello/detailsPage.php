@@ -27,7 +27,7 @@
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Our own css file -->
-    <link href="css/MyCss.css" rel="stylesheet">
+    <link href="css/RoyalSportCss.css" rel="stylesheet">
 
     <!-- navigation bar loader -->
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>

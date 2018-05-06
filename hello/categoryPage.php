@@ -26,7 +26,7 @@
   <link rel="stylesheet" type="text/css" href="css/snip1268.css">
 
   <!-- Our own css file -->
-  <link href="css/MyCss.css" rel="stylesheet">
+  <link href="css/RoyalSportCss.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
   <link href="css/categoryPage.css" rel="stylesheet">
