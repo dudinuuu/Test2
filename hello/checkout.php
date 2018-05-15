@@ -75,6 +75,35 @@
                 <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
               </div>
             </div>
+
+            <h2>Address Details</h2>
+            <div class="control-group form-group">
+              <div class="controls">
+                <label>Address:</label>
+                <input type="text" class="form-control" id="address"  required ata-validation-required-message="Please enter your address.">
+              </div>
+            </div>
+            <div class="row-checkout">
+              <div class="form-group" style="width: 59%;">
+                <label>City:</label>
+                <div class="col-xs-7 col-md-7" style="padding-left: 0px;">
+                  <input type="text" class="form-control" id="city" />
+                </div>
+              </div>
+              <div class="form-group" style="width: 40%;">
+                <label>Post Code:</label>
+                <div class="col-xs-7 col-md-7 pull-right" style="padding-left: 0px;">
+                  <input type="text" class="form-control" id="postCode" />
+                </div>
+              </div>
+            </div>
+            <div class="form-group" style="width: 59%;">
+              <label>Country:</label>
+              <div class="col-xs-7 col-md-7" style="padding-left: 0px;">
+                <input type="text" class="form-control" id="country" />
+              </div>
+            </div>
+
             <h2>Payment Details</h2>
             <div class="control-group form-group">
               <div class="controls">

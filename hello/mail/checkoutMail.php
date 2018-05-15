@@ -6,6 +6,10 @@
   $name = strip_tags(htmlspecialchars($_POST['name']));
   $email_address = strip_tags(htmlspecialchars($_POST['email']));
   $phone = strip_tags(htmlspecialchars($_POST['phone']));
+  $address = strip_tags(htmlspecialchars($_POST['address']));
+  $city = strip_tags(htmlspecialchars($_POST['city']));
+  $postCode = strip_tags(htmlspecialchars($_POST['postCode']));
+  $country = strip_tags(htmlspecialchars($_POST['country']));
   $cardNumber = strip_tags(htmlspecialchars($_POST['cardNumber']));
   $expityMonth = strip_tags(htmlspecialchars($_POST['expityMonth']));
   $expityYear = strip_tags(htmlspecialchars($_POST['expityYear']));
@@ -36,10 +40,10 @@
       $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
       $mail->Port = 587;                                    // TCP port to connect to
       $mail->SMTPOptions = array(
-          'ssl' => array(
-              'verify_peer' => false,
-              'verify_peer_name' => false,
-              'allow_self_signed' => true
+            'ssl' => array(
+            'verify_peer' => false,
+            'verify_peer_name' => false,
+            'allow_self_signed' => true
           )
       );
 
@@ -53,12 +57,12 @@
       //Content
       $mail->isHTML(true);                        // Set email format to HTML
       $mail->Subject = 'Enquiry';
-      $mail->Body = '<h1>Cart Details↴</h1>';
+      $mail->Body = '<h1>Cart Details:</h1>';
       foreach($cart as $value){
         $mail->Body .= '<br>id→ '.$cart[$count]['id'].'<br>Name→ '.$cart[$count]['name'].'<br>Price→ €'.$cart[$count]['price'].'<br>Quantity→ '.$cart[$count]['quantity'].'<br>';
         $count++;
       }
-      $mail->Body .=  '<br><br>Total Price: €'.$pricetotal. '<br>CardNumber: '.$cardNumber. '<br>Expiry: '.$expityMonth.'/'.$expityYear.'<br>CV: '.$cvCode.'<br><br>Name: '.$name. '<br>Phone number: '.$phone. '<br>Email: '.$email_address;
+      $mail->Body .=  '<br><br>Total Price: €'.$pricetotal. '<br>Address: '.$address. '<br>city: '.$city.'<br>post Code: '.$postCode.'<br>country: '.$country.'<br><br>Name: '.$name. '<br>Phone number: '.$phone. '<br>Email: '.$email_address;
       $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
       $mail->send();

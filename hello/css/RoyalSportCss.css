@@ -7,7 +7,7 @@ body {
     display: inline-block;
     background-color: buttonface;
 }
-/* On mouse-over */
+  /* On mouse-over */
 .btn-details:hover {background: #FF7700;}
 .card {
     border: none;
@@ -286,3 +286,14 @@ body {
   color: #484c50;
 }
 /* END - Empty Shoppingcart.php css */
+
+/* CheckoutPage Css */
+.row-checkout{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+}
+/* CheckoutPage Css - END*/

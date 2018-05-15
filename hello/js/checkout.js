@@ -11,6 +11,10 @@ $(function() {
       var name = $("input#name").val();
       var email = $("input#email").val();
       var phone = $("input#phone").val();
+      var address = $("input#address").val();
+      var city = $("input#city").val();
+      var postCode = $("input#postCode").val();
+      var country = $("input#country").val();
       var cardNumber = $("input#cardNumber").val();
       var expityMonth = $("input#expityMonth").val();
       var expityYear = $("input#expityYear").val();
@@ -25,6 +29,10 @@ $(function() {
             name: name,
             phone: phone,
             email: email,
+            address: address,
+            city: city,
+            postCode: postCode,
+            country: country,
             cardNumber: cardNumber,
             expityMonth: expityMonth,
             expityYear: expityYear,
