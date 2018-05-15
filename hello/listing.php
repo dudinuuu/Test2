@@ -77,15 +77,18 @@
               if(isset($search) && count($product) >= 1){
                 $cid = $xml->xpath("/RoyalSport/category/subcategory/product[contains(description,'{$search}')]/parent::*/parent::*/id")[0];
                 $pid = $xml->xpath("/RoyalSport/category/subcategory/product[contains(description,'{$search}')]/id")[0];
+
+                // if there is only one product go directly to details page
                 if(count($product) <= 1)header("Location: detailsPage.php?categoryId=".$cid."&productId=".$pid);
 
+                //else display all the products
                 foreach ($product as $value){
                   if($value->stock != 0){ ?>
                   <figure class="snip1268">
                     <div class="imageContainer">
                       <div class="image">
                         <img src="<?php echo $value->image; ?>" alt="sq-sample4"/>
-                        <a href="detailsPage.php?categoryId=<?php echo $cid; ?>&productId=<?php echo $pid; ?>" class="add-to-cart">Details</a>
+                        <a href="detailsPage.php?categoryId=<?php echo $xml->xpath("/RoyalSport/category/subcategory/product[id='{$value->id}']/parent::*/parent::*/id")[0]; ?>&productId=<?php echo $value->id; ?>" class="add-to-cart">Details</a>
                       </div>
                     </div>
                     <figcaption>
