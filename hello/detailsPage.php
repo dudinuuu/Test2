@@ -155,7 +155,7 @@
        var stock = "<?php echo ($stock); ?>";
        var quantity = document.getElementById("quantity").value;
        if(quantity>stock){
-         alert("le bro");
+         alert("Maximum amount reached");
          document.getElementById("quantity").value = stock;
        }
      }
