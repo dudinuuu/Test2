@@ -111,7 +111,7 @@
                     <div class="imageContainer">
                       <div class="image">
                         <img src="<?php echo $value->image; ?>" alt="sq-sample4"/>
-                        <a href="detailsPage.php?categoryId=<?php echo $categoryId; ?>&productId=<?php echo $pathId; ?>" class="add-to-cart">Details</a>
+                        <a href="detailsPage.php?categoryId=<?php echo $categoryId; ?>&productId=<?php echo $value->id; ?>" class="add-to-cart">Details</a>
                       </div>
                     </div>
                     <figcaption>
