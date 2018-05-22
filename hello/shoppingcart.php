@@ -100,7 +100,6 @@
       $("#total-cart").html(totalCostCart().toFixed(2));
       postTotal(totalCostCart().toFixed(2));
 
-      console.log(cart);
     }
 
     displayCart();
