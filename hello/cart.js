@@ -24,6 +24,9 @@ function removeOneItem(id){ //'-' button in shoppingcart.php
   for(var i in cart){
     if(cart[i].id == id){
       cart[i].quantity--;
+      if(cart[i].quantity == 0){
+        cart.splice(i, 1);
+      }
       break;
     }
   }
