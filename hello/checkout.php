@@ -107,7 +107,7 @@
             <h2>Payment Details</h2>
             <div class="control-group form-group">
               <div class="controls">
-                <label>CARD NUMBER:</label>
+                <label>Card Number:</label>
                 <div class="input-group">
                   <input type="cardNumber" class="form-control" id="cardNumber" required data-validation-required-message="Please enter your card number." placeholder="Valid Card Number">
                 </div>
@@ -118,7 +118,7 @@
                 <div class="col-xs-7 col-md-7">
                     <div class="form-group">
                         <label for="expityMonth">
-                            EXPIRY DATE</label>
+                            Expiry Date</label>
                         <div class="col-xs-6 col-lg-6 pl-ziro">
                             <input type="text" class="form-control" id="expityMonth" required placeholder="MM"  />
                         </div>
@@ -129,7 +129,7 @@
                 <div class="col-xs-5 col-md-5 pull-right">
                     <div class="form-group">
                         <label for="cvCode">
-                            CV CODE</label>
+                            CVV</label>
                         <input type="password" class="form-control" id="cvCode" required placeholder="CV"  />
                     </div>
                 </div>

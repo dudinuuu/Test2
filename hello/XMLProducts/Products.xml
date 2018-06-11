@@ -8,25 +8,25 @@
     <carouselImage>https://i.pinimg.com/originals/95/b3/94/95b3945344c1cd356ee6fdbe735b197d.jpg</carouselImage>
     <carouselImage>https://i.pinimg.com/originals/07/60/f2/0760f2c24281533680fff168b41c3281.jpg</carouselImage>
     <subcategory>
-      <name>boots</name>
+      <name>Boots</name>
       <id>1</id>
       <product>
           <id>1</id>
-          <name>nike n-50</name>
+          <name>Nike n-50</name>
           <cost>29.99</cost>
-          <description>Very Good nike shoes</description>
+          <description>Very Good Nike shoes</description>
           <image>https://i.pinimg.com/736x/02/bf/87/02bf87d6ade05c685e796eae16dec81c--tennis-nike-mujer-roshe.jpg</image>
           <stock>8</stock>
       </product>
     </subcategory>
     <subcategory>
-      <name>gear</name>
+      <name>Gear</name>
       <id>2</id>
       <product>
           <id>2</id>
-          <name>nike t-shirt</name>
+          <name>Nike T-shirt</name>
           <cost>19.99</cost>
-          <description>Very Good  T-shirt</description>
+          <description>Very Good T-shirt</description>
           <image>https://i.pinimg.com/736x/ba/6e/af/ba6eafc52c24f16564a9729692af3327--zoom-graphic-tees.jpg</image>
           <stock>9</stock>
       </product>
@@ -36,9 +36,9 @@
       <id>3</id>
       <product>
           <id>3</id>
-          <name>nike extreme gloves</name>
+          <name>Nike Extreme Gloves</name>
           <cost>99.99</cost>
-          <description>extreme gloves</description>
+          <description>Extreme Gloves</description>
           <image>https://s7d2.scene7.com/is/image/dkscdn/16NIKGTHRMFTLTRNGCLDA_Vintage_Green_Volt_is/</image>
           <stock>8</stock>
       </product>
@@ -52,25 +52,25 @@
     <carouselImage>https://i.pinimg.com/originals/b2/cd/b7/b2cdb7dff3828f5a00f86642e4165f5a.jpg</carouselImage>
     <carouselImage>https://i.pinimg.com/originals/08/26/76/0826766066b10f85fd2b18ac29f1515f.jpg</carouselImage>
     <subcategory>
-      <name>boots</name>
+      <name>Boots</name>
       <id>1</id>
       <product>
           <id>4</id>
-          <name>nike kyrie 4</name>
+          <name>Nike Kyrie 4</name>
           <cost>77.97</cost>
-          <description>Mhux worth it nike shoes</description>
+          <description>Mhux Worth It Nike Shoes</description>
           <image>https://i.pinimg.com/564x/4b/99/a2/4b99a20eba1607dcbb90d78a3a094189.jpg</image>
           <stock>6</stock>
       </product>
     </subcategory>
     <subcategory>
-      <name>gear</name>
+      <name>Gear</name>
       <id>2</id>
       <product>
           <id>5</id>
-          <name>Celtics Fanatics shirt</name>
+          <name>Celtics Fanatics Shirt</name>
           <cost>29.99</cost>
-          <description>Mhux worth it basketball celtics shirt</description>
+          <description>Mhux Worth It Basketball Celtics Shirt</description>
           <image>https://i.pinimg.com/564x/f8/c2/a6/f8c2a62d1fd423dc244ec2dfc188e65c.jpg</image>
           <stock>6</stock>
       </product>
@@ -82,9 +82,9 @@
           <id>6</id>
           <name>Nike Basketball</name>
           <cost>11.99</cost>
-          <description>mhux worth it bouncy nike ball</description>
+          <description>Mhux Worth It Bouncy Nike Ball</description>
           <image>https://i.pinimg.com/564x/f6/80/49/f6804982750d89554dfea3187c6d0ae5.jpg</image>
-          <stock>8</stock>
+          <stock>7</stock>
       </product>
     </subcategory>
   </category>
@@ -102,7 +102,7 @@
         <id>7</id>
         <name>Adidas Boxing Gloves</name>
         <cost>29.99</cost>
-        <description>Very Good Adidas gloves</description>
+        <description>Very Good Adidas Gloves</description>
         <image>https://mmafightstore.com.au/mma/wp-content/uploads/2015/02/adidas-ultima-boxing-gloves-pair-red.jpg</image>
         <stock>10</stock>
       </product>
@@ -114,7 +114,7 @@
         <id>8</id>
         <name>Everlast Boxing Shorts</name>
         <cost>24.99</cost>
-        <description>Very good Everlast Boxing Shorts</description>
+        <description>Very Good Everlast Boxing Shorts</description>
         <image>https://i.pinimg.com/originals/9c/b8/44/9cb84441ffc1aa651acaa3b6a10b3aa5.jpg</image>
         <stock>10</stock>
       </product>
@@ -126,7 +126,7 @@
         <id>9</id>
         <name>Venom Boxing Mouth Guards</name>
         <cost>14.99</cost>
-        <description>Very good Venom Boxing Mouth Guards</description>
+        <description>Very Good Venom Boxing Mouth Guards</description>
         <image>https://s-media-cache-ak0.pinimg.com/originals/cf/ba/87/cfba8775d11b51ac257ab6092593b7c1.jpg</image>
         <stock>10</stock>
       </product>
